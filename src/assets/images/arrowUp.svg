@@ -1,0 +1,36 @@
+<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="12" height="8" fill="#F5F5F5"/>
+<g id="Search language popup">
+<g id="Frame 203">
+<rect width="1440" height="760" transform="translate(-887 -134)" fill="#F0F0F0"/>
+<g id="language selection page - web">
+<rect width="1440" height="760" transform="translate(-887 -134)" fill="white"/>
+<g id="Frame 208">
+<g id="Frame 3">
+<g id="all language">
+<rect x="-444" y="-82" width="536" height="656" rx="10" fill="white"/>
+<g id="autocomplete  language">
+<g id="Frame 229">
+<g id="Frame 230">
+<g id="scroller layout">
+<g id="scroller">
+<rect id="Rectangle 26" x="-5.5" y="-5.5" width="23" height="515" rx="4.5" stroke="#485C6E" stroke-opacity="0.5"/>
+<path id="Vector" d="M10.59 7.41L12 6L6 -2.62268e-07L-2.62268e-07 6L1.41 7.41L6 2.83L10.59 7.41Z" fill="#485C6E"/>
+<g id="Rectangle 27">
+<mask id="path-5-inside-1_0_1" fill="white">
+<path d="M-6 -6H18V14H-6V-6Z"/>
+</mask>
+<path d="M18 13H-6V15H18V13Z" fill="#485C6E" fill-opacity="0.5" mask="url(#path-5-inside-1_0_1)"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>

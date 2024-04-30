@@ -1,0 +1,236 @@
+@import '../../../../assets/styles/variables.scss';
+
+.job {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  border: 1px solid $borderColor;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.03);
+  background-color: $colorPaper;
+}
+
+.scores {
+  display: flex;
+  padding-right: 10px;
+}
+.scores span {
+  padding: 7px;
+}
+
+@media (max-width: 959px) {
+  .job {
+    margin: 1rem 0 0;
+  }
+}
+
+.jobHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+
+  a {
+    text-decoration: none;
+  }
+
+  div {
+    margin-top: -0.5rem;
+  }
+
+  .subHeader {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+
+    @media (max-width: 959px) {
+      gap: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 959px) {
+  .jobHeader {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.jobLogo {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+}
+
+@media (max-width: 959px) {
+  .jobLogo {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+.jobHeaderText {
+  display: flex;
+  flex-direction: column;
+  width: 84%;
+}
+
+.jobTitle {
+  margin: 0;
+  font-size: 1.25rem;
+  color: $colorTextSecondary;
+}
+
+.jobCompany {
+  font-size: 0.75rem;
+  line-height: 1.25;
+  color: $colorText1;
+}
+
+@media (max-width: 959px) {
+  .jobCompany {
+    margin-top: 0.25rem;
+    font-weight: bold;
+  }
+}
+
+.jobDivider {
+  background-color: $borderColor;
+}
+
+.jobBenefits {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.75rem 2rem;
+}
+
+@media (max-width: 959px) {
+  .jobBenefits {
+    margin: 1.75rem 1rem;
+  }
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.benefitIcon {
+  width: 1rem;
+  height: 1rem;
+  object-fit: contain;
+}
+
+.benefitTitle {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: $colorTextSecondary;
+}
+
+@media (max-width: 959px) {
+  .benefitTitle {
+    margin-left: 0.5rem;
+  }
+}
+
+.jobText {
+  padding: 0 2rem 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.79;
+  color: $colorTextSecondary;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: $colorTextSecondary;
+    font-weight: 700;
+
+    button {
+      margin-block-start: 1rem;
+      padding: 0.3rem 0.8rem;
+    }
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 959px) {
+  .jobText {
+    padding: 0 1rem 1.5rem;
+    line-height: 1.5;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.galleryMainImage {
+  height: 19.5rem;
+  border: 1px solid $colorPaper;
+  background-color: grey;
+  object-fit: cover;
+}
+
+@media (max-width: 959px) {
+  .galleryMainImage {
+    height: 15rem;
+  }
+}
+
+.galleryRestImages {
+  display: flex;
+  width: 100%;
+}
+
+.galleryRestImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33.33%;
+  height: 7.4rem;
+  border-left: 1px solid $colorPaper;
+  position: relative;
+  background-color: grey;
+  object-fit: cover;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &:last-child {
+    border-right: 1px solid $colorPaper;
+  }
+}
+
+@media (max-width: 959px) {
+  .galleryRestImage {
+    height: 6.25rem;
+  }
+}
+
+.galleryRemainingImagesCount {
+  position: absolute;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: $colorPaper;
+}
+
+@media (max-width: 959px) {
+  .galleryRemainingImagesCount {
+    font-size: 1.75rem;
+  }
+}

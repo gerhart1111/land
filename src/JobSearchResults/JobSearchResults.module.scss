@@ -1,0 +1,32 @@
+@import '../assets/styles/variables';
+
+.container {
+  margin: 6rem auto 0;
+  max-width: 48rem;
+}
+.endmessage{
+  border: 1px solid $borderColor;
+  padding: 1rem 2rem ;
+  background-color: $colorPaper;
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 0.18px;
+  color: $colorTextSecondary;
+  text-align: center;
+}
+
+@media(max-width: 959px) {
+  .container {
+    margin-top: 4.5rem;
+    max-width: initial;
+  }
+  .endmessage{
+    font-size: 0.65rem;
+    letter-spacing: 0.12px;
+  }
+  .jobs {
+    margin: 0 0.5rem;
+  }
+
+}

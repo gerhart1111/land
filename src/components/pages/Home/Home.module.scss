@@ -1,0 +1,36 @@
+@import "../../../assets/styles/variables.scss";
+
+.homePage {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: $inputBackgroundColor;
+  gap: 48px;
+}
+
+.mainHome {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media only screen and (max-width: 1380px) {
+  .homePage {
+    width: 100%;
+  }
+
+  .mainHome {
+    width: 100%;
+  }
+}
+
+@media (max-width: 959px) {
+  .asideHome {
+    display: none;
+  }
+
+  .homePage {
+    padding-top: 0rem;
+    width: 100%;
+  }
+}

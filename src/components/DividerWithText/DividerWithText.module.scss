@@ -1,0 +1,19 @@
+@import '../../assets/styles/variables';
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.border {
+  border-bottom: 1px solid $borderColor;
+  width: 100%;
+}
+
+.content {
+  padding: 0 1rem;
+  width: max-content;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  color: $colorTextSecondary;
+}

@@ -1,0 +1,177 @@
+@import "../../../assets/styles/variables";
+
+.root {
+    position: relative;
+    width: 768px;
+    flex-shrink: 0;
+    /* Post Shadow */
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.20);
+}
+
+.menu {
+    position: absolute;
+    right: 20px;
+    top: 17px;
+}
+
+.warpTop {
+    display: flex;
+    align-items: center;
+    padding: 17px 20px;
+    gap: 13px;
+}
+
+.profileImg {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+.name {
+    color: #000;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.667px;
+}
+
+.location {
+    color: #414141;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.667px;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.centerRow {
+    align-items: center;
+    gap: 5px;
+}
+
+.titleJobSalary {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 23px;
+}
+
+.boldText {
+    color: #000;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.667px;
+}
+
+.description {
+    display: -webkit-box;
+    color: #000;
+    position: relative;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.667px;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.descriptionLimit {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* or any number >2 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.showMoreButton {
+    position: absolute;
+    right: 0px;
+    bottom: 20px;
+    background-color: #FFF;
+    color: #00799B;
+    padding: 0px 10px;
+}
+
+.img {
+    width: 768px;
+    height: 768px;
+    flex-shrink: 0;
+}
+
+.footer {
+    height: 79px;
+    width: 100%;
+    height: 79px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 78px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 139px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 7px;
+    background: var(--Register-Button, #00799B);
+    border: unset;
+}
+
+.btn:nth-child(2) {
+    background: #fff;
+    border-radius: 7px;
+    border: 1px solid var(--Buttons, #00799B);
+}
+
+.btn:nth-child(3) {
+    background: transparent;
+}
+
+.view {
+    background: var(--Register-Button, #00799B);
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.667px;
+}
+
+.decline {
+    color: var(--Buttons, var(--Register-Button, #00799B));
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.667px;
+}

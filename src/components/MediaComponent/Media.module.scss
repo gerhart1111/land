@@ -1,0 +1,85 @@
+@import '../../assets/styles/variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  padding-bottom: 3rem;
+  border: 1px solid $borderColor;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.03);
+  background-color: $colorPaper;
+}
+@media(max-width: 959px) {
+  .container {
+    margin: 1rem 0rem 1rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.title {
+  padding: 1.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: $colorText1;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.galleryMainImage {
+  height: 19.5rem;
+  border: 1px solid $colorPaper;
+  background-color: grey;
+  object-fit: cover;
+}
+@media(max-width: 959px) {
+  .galleryMainImage {
+    height: 15rem;
+  }
+}
+
+.galleryRestImages {
+  display: flex;
+  width: 100%;
+}
+
+.galleryRestImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33.33%;
+  height: 7.4rem;
+  border-left: 1px solid $colorPaper;
+  position: relative;
+  background-color: grey;
+  object-fit: cover;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &:last-child {
+    border-right: 1px solid $colorPaper;
+  }
+}
+@media(max-width: 959px) {
+  .galleryRestImage {
+    height: 6.25rem;
+  }
+}
+
+.galleryRemainingImagesCount {
+  position: absolute;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: $colorPaper;
+}
+@media(max-width: 959px) {
+  .galleryRemainingImagesCount {
+    font-size: 1.75rem;
+  }
+}

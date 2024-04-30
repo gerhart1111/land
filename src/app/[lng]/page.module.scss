@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  padding-right: 46px;
+}
+.navigation {
+  min-width: 272px;
+  height: 601px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #fff;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.03);
+}
+
+@media (max-width: 959px) {
+  .navigation {
+    display: none;
+  }
+
+  .asideHome {
+    display: none;
+  }
+  
+  .mainRoute {
+    margin-inline: 0;
+    padding-top: 0px;
+  }
+
+  .container {
+    padding: 0%;
+  }
+}
+.mainRoute {
+  flex: 1;
+  padding-top: 2rem;
+}
+
+@media only screen and (max-width: 1380px) {
+  .mainRoute {
+    margin-inline: 46px;
+    flex-shrink: 0;
+    flex-grow: 1;
+    width: 30%;
+  }
+}

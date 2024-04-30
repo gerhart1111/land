@@ -1,0 +1,59 @@
+@import "variables";
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: local("Roboto-Bold"), local("Roboto Bold"),
+    url("../../assets/fonts/Robotobold.woff2") format("woff2"),
+    url("../../assets/fonts/Robotobold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Medium";
+  src: local("Roboto-Medium"), local("Roboto Medium"),
+    url("../../assets/fonts/Robotomedium.woff2") format("woff2"),
+    url("../../assets/fonts/Robotomedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Light";
+  src: local("Roboto-Light"), local("Roboto Light"),
+    url("../../assets/fonts/Robotolight.woff2") format("woff2"),
+    url("../../assets/fonts/Robotolight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: local("Roboto"), local("Roboto-Regular"),
+    url("../../assets/fonts/Roboto.woff2") format("woff2"),
+    url("../../assets/fonts/Roboto.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: #1b2024;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

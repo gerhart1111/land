@@ -1,0 +1,86 @@
+@import '../../assets/styles/variables';
+
+.header {
+  display: flex;
+  position: relative;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+@media(max-width: 959px) {
+  .header {
+    flex-direction: column-reverse;
+  }
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 2.5rem;
+  left: -6.4rem;
+  width: 5.25rem;
+  text-decoration: none;
+}
+@media(max-width: 959px) {
+  .logoContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: $colorPaper;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.03);
+  }
+  .logo {
+    flex-direction: row;
+    position: initial;
+    .logoTitle {
+      width: 80%;
+    }
+  }
+}
+
+.logoImage {
+  margin-bottom: 0.5rem;
+  width: 5.25rem;
+  height: 5.25rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+@media(max-width: 959px) {
+  .logoImage {
+    margin-bottom: 0;
+    margin-right: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.logoTitle {
+  line-height: 1.7;
+  text-align: center;
+  color: $colorTextSecondary;
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 400;
+}
+@media(max-width: 959px) {
+  .logoTitle {
+    font-size: 1.125rem;
+  }
+}
+
+.cover {
+  flex: 1;
+  width: 100%;
+  height: 22.5rem;
+  object-fit: cover;
+}
+@media(max-width: 959px) {
+  .cover {
+    height: 15rem;
+  }
+}
+
