@@ -66,7 +66,7 @@ const homeMenu = {
     },
     {
       title: i18n.t("navigation.constants.career", { ns: "navigation" }),
-      href: "/career",
+      href: "/citizenship",
       icon: <PeopleIcon sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
@@ -77,7 +77,7 @@ const homeMenu = {
     },
     {
       title: i18n.t("navigation.constants.business", { ns: "navigation" }),
-      href: "/business",
+      href: "/documents",
       icon: <BusinessIcon sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
@@ -88,7 +88,7 @@ const homeMenu = {
     },
     {
       title: i18n.t("navigation.constants.resources", { ns: "navigation" }),
-      href: "/resources",
+      href: "/search-human",
       icon: <ArticleIcon sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
@@ -507,7 +507,7 @@ export const careerMenu = {
   links: [
     {
       title: i18n.t("navigation.constants.careerAi"),
-      href: "/career/ai",
+      href: "/citizenship/eu",
       icon: <PsychologyIcon sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
@@ -518,7 +518,7 @@ export const careerMenu = {
     },
     {
       title: i18n.t("navigation.constants.smartJobSearch"),
-      href: "/career/smart-search",
+      href: "/citizenship/legalization",
       icon: <SearchIcon sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
@@ -529,7 +529,7 @@ export const careerMenu = {
     },
     {
       title: i18n.t("navigation.constants.salaryAndWorkplace"),
-      href: "/career/salary-workplace",
+      href: "/citizenship/pass-ua",
       icon: <AttachMoneyIcon sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
@@ -540,34 +540,12 @@ export const careerMenu = {
     },
     {
       title: i18n.t("navigation.constants.companyReviews"),
-      href: "/career/company-reviews",
+      href: "/citizenship/pass-ru",
       icon: <ReviewsIcon sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
           {gradient}
           <ReviewsIcon style={{ fill: "url(#linearColors)" }} />
-        </>
-      ),
-    },
-    {
-      title: i18n.t("navigation.constants.referralAndConnections"),
-      href: "/career/referrals-connections",
-      icon: <GroupsIcon sx={{ fill: "#485C6E" }} />,
-      activeIcon: (
-        <>
-          {gradient}
-          <GroupsIcon style={{ fill: "url(#linearColors)" }} />
-        </>
-      ),
-    },
-    {
-      title: i18n.t("navigation.constants.applicationStatuses"),
-      href: "/career/application-statuses",
-      icon: <ThumbsUpDownIcon sx={{ fill: "#485C6E" }} />,
-      activeIcon: (
-        <>
-          {gradient}
-          <ThumbsUpDownIcon style={{ fill: "url(#linearColors)" }} />
         </>
       ),
     },
@@ -590,17 +568,8 @@ function careerMenuUpdate() {
       ns: "navigation",
     }
   );
-  careerMenu.links[3].title = i18n.t("navigation.constants.companyReviews", {
-    ns: "navigation",
-  });
-  careerMenu.links[4].title = i18n.t(
-    "navigation.constants.referralAndConnections",
-    {
-      ns: "navigation",
-    }
-  );
-  careerMenu.links[5].title = i18n.t(
-    "navigation.constants.applicationStatuses",
+  careerMenu.links[3].title = i18n.t(
+    "navigation.constants.companyReviews",
     {
       ns: "navigation",
     }
@@ -613,7 +582,7 @@ export const businessMenu = {
   links: [
     {
       title: i18n.t("navigation.constants.recruitmentAI"),
-      href: "/business/recruitment-ai",
+      href: "/documents/ren-pas",
       icon: <PsychologyIcon sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
@@ -624,7 +593,7 @@ export const businessMenu = {
     },
     {
       title: i18n.t("navigation.constants.targetedJobCampaigns"),
-      href: "/business/targeted-campaigns",
+      href: "/documents/certificates",
       icon: <AdsClickIcon sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
@@ -635,34 +604,12 @@ export const businessMenu = {
     },
     {
       title: i18n.t("navigation.constants.companyBranding"),
-      href: "/business/company-branding",
+      href: "/documents/driver-license",
       icon: <CoPresentIcon sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
           {gradient}
           <CoPresentIcon style={{ fill: "url(#linearColors)" }} />
-        </>
-      ),
-    },
-    {
-      title: i18n.t("navigation.constants.freeAndPremiumPlans"),
-      href: "/business/plans",
-      icon: <PaymentsIcon sx={{ fill: "#485C6E" }} />,
-      activeIcon: (
-        <>
-          {gradient}
-          <PaymentsIcon style={{ fill: "url(#linearColors)" }} />
-        </>
-      ),
-    },
-    {
-      title: i18n.t("navigation.constants.payPerApplicantPricing"),
-      href: "/business/pay-per-applicant",
-      icon: <AttachMoneyIcon sx={{ fill: "#485C6E" }} />,
-      activeIcon: (
-        <>
-          {gradient}
-          <AttachMoneyIcon style={{ fill: "url(#linearColors)" }} />
         </>
       ),
     },
@@ -685,18 +632,7 @@ function businessMenuUpdate() {
   businessMenu.links[2].title = i18n.t("navigation.constants.companyBranding", {
     ns: "navigation",
   });
-  businessMenu.links[3].title = i18n.t(
-    "navigation.constants.freeAndPremiumPlans",
-    {
-      ns: "navigation",
-    }
-  );
-  businessMenu.links[4].title = i18n.t(
-    "navigation.constants.payPerApplicantPricing",
-    {
-      ns: "navigation",
-    }
-  );
+
 }
 
 export const resourcesMenu = {
@@ -704,24 +640,24 @@ export const resourcesMenu = {
   backTitle: i18n.t("navigation.constants.home"),
   links: [
     {
-      title: i18n.t("navigation.constants.articles"),
-      href: "/resources/articles",
-      icon: <Article sx={{ fill: "#485C6E" }} />,
+      title: i18n.t("navigation.constants.team"),
+      href: "/search-human/bio",
+      icon: <EmojiPeopleIcon sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
           {gradient}
-          <Article style={{ fill: "url(#linearColors)" }} />
+          <EmojiPeopleIcon style={{ fill: "url(#linearColors)" }} />
         </>
       ),
     },
     {
-      title: i18n.t("navigation.constants.forum"),
-      href: "/resources/forum",
-      icon: <Forum sx={{ fill: "#485C6E" }} />,
+      title: i18n.t("navigation.constants.offices"),
+      href: "/search-human/geo",
+      icon: <PlaceIcon sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
           {gradient}
-          <Forum style={{ fill: "url(#linearColors)" }} />
+          <PlaceIcon style={{ fill: "url(#linearColors)" }} />
         </>
       ),
     },
@@ -730,10 +666,10 @@ export const resourcesMenu = {
 
 function resourcesMenuUpdate() {
   resourcesMenu.backTitle = i18n.t("navigation.constants.home");
-  resourcesMenu.links[0].title = i18n.t("navigation.constants.articles", {
+  aboutMenu.links[1].title = i18n.t("navigation.constants.team", {
     ns: "navigation",
   });
-  resourcesMenu.links[1].title = i18n.t("navigation.constants.forum", {
+  aboutMenu.links[2].title = i18n.t("navigation.constants.offices", {
     ns: "navigation",
   });
 }
@@ -754,57 +690,24 @@ export const aboutMenu = {
       ),
     },
     {
-      title: i18n.t("navigation.constants.team"),
-      href: "/about/team",
-      icon: <EmojiPeopleIcon sx={{ fill: "#485C6E" }} />,
+      title: i18n.t("navigation.constants.articles"),
+      href: "/about/articles",
+      icon: <Article sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
           {gradient}
-          <EmojiPeopleIcon style={{ fill: "url(#linearColors)" }} />
+          <Article style={{ fill: "url(#linearColors)" }} />
         </>
       ),
     },
     {
-      title: i18n.t("navigation.constants.offices"),
-      href: "/about/offices",
-      icon: <PlaceIcon sx={{ fill: "#485C6E" }} />,
+      title: i18n.t("navigation.constants.forum"),
+      href: "/about/forum",
+      icon: <Forum sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
           {gradient}
-          <PlaceIcon style={{ fill: "url(#linearColors)" }} />
-        </>
-      ),
-    },
-    {
-      title: i18n.t("navigation.constants.investors"),
-      href: "/about/investors",
-      icon: <MonetizationOnIcon sx={{ fill: "#485C6E" }} />,
-      activeIcon: (
-        <>
-          {gradient}
-          <MonetizationOnIcon style={{ fill: "url(#linearColors)" }} />
-        </>
-      ),
-    },
-    {
-      title: i18n.t("navigation.constants.partners"),
-      href: "/about/partners",
-      icon: <HandshakeIcon sx={{ fill: "#485C6E" }} />,
-      activeIcon: (
-        <>
-          {gradient}
-          <HandshakeIcon style={{ fill: "url(#linearColors)" }} />
-        </>
-      ),
-    },
-    {
-      title: i18n.t("navigation.constants.contactUs"),
-      href: "/about/contact",
-      icon: <ContactSupportIcon sx={{ fill: "#485C6E" }} />,
-      activeIcon: (
-        <>
-          {gradient}
-          <ContactSupportIcon style={{ fill: "url(#linearColors)" }} />
+          <Forum style={{ fill: "url(#linearColors)" }} />
         </>
       ),
     },
@@ -816,21 +719,13 @@ function aboutMenuUpdate() {
   aboutMenu.links[0].title = i18n.t("navigation.constants.aboutUs", {
     ns: "navigation",
   });
-  aboutMenu.links[1].title = i18n.t("navigation.constants.team", {
+  resourcesMenu.links[0].title = i18n.t("navigation.constants.articles", {
     ns: "navigation",
   });
-  aboutMenu.links[2].title = i18n.t("navigation.constants.offices", {
+  resourcesMenu.links[1].title = i18n.t("navigation.constants.forum", {
     ns: "navigation",
   });
-  aboutMenu.links[3].title = i18n.t("navigation.constants.investors", {
-    ns: "navigation",
-  });
-  aboutMenu.links[4].title = i18n.t("navigation.constants.partners", {
-    ns: "navigation",
-  });
-  aboutMenu.links[5].title = i18n.t("navigation.constants.contactUs", {
-    ns: "navigation",
-  });
+ 
 }
 
 export const helpMenu = {
@@ -839,7 +734,7 @@ export const helpMenu = {
   links: [
     {
       title: i18n.t("navigation.constants.careerHelpCenter"),
-      href: "/help/career",
+      href: "/help/personal",
       icon: <Public sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
@@ -868,7 +763,7 @@ export const careerHelpMenu = {
   links: [
     {
       title: i18n.t("navigation.constants.usingNoviopus"),
-      href: "/help/career/using-noviopus",
+      href: "/help/personal/information",
       icon: <School sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
@@ -879,7 +774,7 @@ export const careerHelpMenu = {
     },
     {
       title: i18n.t("navigation.constants.faq"),
-      href: "/help/career/faq",
+      href: "/help/personal/faq",
       icon: <QuestionAnswer sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
@@ -890,7 +785,7 @@ export const careerHelpMenu = {
     },
     {
       title: i18n.t("navigation.constants.contactUs"),
-      href: "/help/career/contact",
+      href: "/help/personal/contact",
       icon: <ContactSupport sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
@@ -908,7 +803,7 @@ export const businessHelpMenu = {
   links: [
     {
       title: i18n.t("navigation.constants.usingNoviopusBusiness"),
-      href: "/help/business/using-noviopus",
+      href: "/help/business/information",
       icon: <School sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
@@ -944,6 +839,20 @@ export const businessHelpMenu = {
 
 function helpMenuupdate() {
   helpMenu.backTitle = i18n.t("constants.home", { ns: "navigation" });
+  helpMenu.links[0].title = i18n.t("navigation.constants.careerHelpCenter", { ns: "navigation" });
+  helpMenu.links[1].title = i18n.t("navigation.constants.businessHelpCenter", { ns: "navigation" });
+
+  careerHelpMenu.links[0].title = i18n.t("navigation.constants.usingNoviopus", { ns: "navigation" });
+  careerHelpMenu.links[1].title = i18n.t("navigation.constants.faq", { ns: "navigation" });
+  careerHelpMenu.links[2].title = i18n.t("navigation.constants.contactUs", { ns: "navigation" });
+  
+  
+}
+
+function helpMenuBusinessUpdate(){
+  businessHelpMenu.links[0].title = i18n.t("navigation.constants.usingNoviopusBusiness", { ns: "navigation" });
+  businessHelpMenu.links[1].title = i18n.t("navigation.constants.faqBusiness", { ns: "navigation" });
+  businessHelpMenu.links[2].title = i18n.t("navigation.constants.contactUsBusiness", { ns: "navigation" });
 }
 
 export const usingNoviopusMenuCareer = {
@@ -951,24 +860,8 @@ export const usingNoviopusMenuCareer = {
   backTitle: "navigation.constants.home",
   links: [
     {
-      href: "/help/career/using-noviopus?id=general",
+      href: "/help/career/using-noviopus",
       title: "navigation.constants.general",
-    },
-    {
-      href: "/help/career/using-noviopus?id=create-an-account",
-      title: "navigation.constants.create-account",
-    },
-    {
-      href: "/help/career/using-noviopus?id=create-your-profile",
-      title: "navigation.constants.create-profile",
-    },
-    {
-      href: "/help/career/using-noviopus?id=career",
-      title: "navigation.constants.career",
-    },
-    {
-      href: "/help/career/using-noviopus?id=settings",
-      title: "navigation.constants.settings",
     },
   ],
 };
@@ -981,72 +874,13 @@ function usingNoviopusMenuCareerUpdate() {
     "navigation.constants.general",
     { ns: "navigation" }
   );
-  usingNoviopusMenuCareer.links[1].title = i18n.t(
-    "navigation.constants.create-account",
-    { ns: "navigation" }
-  );
-  usingNoviopusMenuCareer.links[2].title = i18n.t(
-    "navigation.constants.create-profile",
-    { ns: "navigation" }
-  );
-  usingNoviopusMenuCareer.links[3].title = i18n.t(
-    "navigation.constants.career",
-    { ns: "navigation" }
-  );
-  usingNoviopusMenuCareer.links[4].title = i18n.t(
-    "navigation.constants.settings",
-    { ns: "navigation" }
-  );
 }
 
 export const faqMenuCareer = {
   backRoute: "/",
   backTitle: "constants.home",
   links: [
-    { href: "/help/career/faq?id=new-account", title: "constants.newAccount" },
-    {
-      href: "/help/career/faq?id=confirm-email",
-      title: "constants.confirmEmail",
-    },
-    {
-      href: "/help/career/faq?id=confirm-email-issues",
-      title: "constants.confirmEmailIssues",
-    },
-    { href: "/help/career/faq?id=sign-in", title: "constants.signIn" },
-    {
-      href: "/help/career/faq?id=reset-password",
-      title: "constants.resetPassword",
-    },
-    { href: "/help/career/faq?id=job-search", title: "constants.jobSearch" },
-    {
-      href: "/help/career/faq?id=apply-decline-jobs",
-      title: "constants.applyDeclineJobs",
-    },
-    {
-      href: "/help/career/faq?id=personal-profile",
-      title: "constants.personalProfile",
-    },
-    {
-      href: "/help/career/faq?id=career-profile",
-      title: "constants.careerProfile",
-    },
-    {
-      href: "/help/career/faq?id=job-preferences",
-      title: "constants.jobPreferences",
-    },
-    {
-      href: "/help/career/faq?id=workplace-preferences",
-      title: "constants.workplacePreferences",
-    },
-    { href: "/help/career/faq?id=connections", title: "constants.connections" },
-    {
-      href: "/help/career/faq?id=personal-interests",
-      title: "constants.personalInterests",
-    },
-    {
-      href: "/help/career/faq?id=change-password",
-      title: "constants.changePassword",
-    },
+    { href: "/help/career/faq", title: "constants.newAccount" },
   ],
 };
 
@@ -1057,52 +891,6 @@ function faqMenuCareerUpdate() {
   faqMenuCareer.links[0].title = i18n.t("navigation.constants.new-account", {
     ns: "navigation",
   });
-  faqMenuCareer.links[1].title = i18n.t("navigation.constants.confirm-email", {
-    ns: "navigation",
-  });
-  faqMenuCareer.links[2].title = i18n.t(
-    "navigation.constants.confirm-email-issues",
-    { ns: "navigation" }
-  );
-  faqMenuCareer.links[3].title = i18n.t("navigation.constants.sign-in", {
-    ns: "navigation",
-  });
-  faqMenuCareer.links[4].title = i18n.t("navigation.constants.reset-password", {
-    ns: "navigation",
-  });
-  faqMenuCareer.links[5].title = i18n.t("navigation.constants.job-search", {
-    ns: "navigation",
-  });
-  faqMenuCareer.links[6].title = i18n.t(
-    "navigation.constants.apply-decline-jobs",
-    { ns: "navigation" }
-  );
-  faqMenuCareer.links[7].title = i18n.t(
-    "navigation.constants.personal-profile",
-    { ns: "navigation" }
-  );
-  faqMenuCareer.links[8].title = i18n.t("navigation.constants.career-profile", {
-    ns: "navigation",
-  });
-  faqMenuCareer.links[9].title = i18n.t(
-    "navigation.constants.job-preferences",
-    { ns: "navigation" }
-  );
-  faqMenuCareer.links[10].title = i18n.t(
-    "navigation.constants.workplace-preferences",
-    { ns: "navigation" }
-  );
-  faqMenuCareer.links[11].title = i18n.t("navigation.constants.connections", {
-    ns: "navigation",
-  });
-  faqMenuCareer.links[12].title = i18n.t(
-    "navigation.constants.personal-interests",
-    { ns: "navigation" }
-  );
-  faqMenuCareer.links[13].title = i18n.t(
-    "navigation.constants.change-password",
-    { ns: "navigation" }
-  );
 }
 
 export const usingNoviopusMenuBusiness = {
@@ -1110,45 +898,8 @@ export const usingNoviopusMenuBusiness = {
   backTitle: "constants.home",
   links: [
     {
-      href: "/help/business/using-noviopus?id=general",
+      href: "/help/business/information",
       title: "constants.general",
-    },
-    {
-      href: "/help/business/using-noviopus?id=noviopus-business",
-      title: "Noviopus business",
-    },
-    {
-      href: "/help/business/using-noviopus?id=account-type",
-      title: "constants.accountType",
-    },
-    {
-      href: "/help/business/using-noviopus?id=homepage",
-      title: "constants.homepage",
-    },
-    {
-      href: "/help/business/using-noviopus?id=company",
-      title: "constants.company",
-    },
-    { href: "/help/business/using-noviopus?id=jobs", title: "constants.jobs" },
-    {
-      href: "/help/business/using-noviopus?id=candidate-profile",
-      title: "constants.candidateProfile",
-    },
-    {
-      href: "/help/business/using-noviopus?id=candidates",
-      title: "constants.candidates",
-    },
-    {
-      href: "/help/business/using-noviopus?id=ad-campaigns",
-      title: "constants.adCampaigns",
-    },
-    {
-      href: "/help/business/using-noviopus?id=reports",
-      title: "constants.reports",
-    },
-    {
-      href: "/help/business/using-noviopus?id=settings",
-      title: "constants.settings",
     },
   ],
 };
@@ -1161,46 +912,7 @@ function usingNoviopusMenuBusinessUpdate() {
     "navigation.constants.general",
     { ns: "navigation" }
   );
-  usingNoviopusMenuBusiness.links[1].title = i18n.t(
-    "navigation.constants.noviopus-business",
-    { ns: "navigation" }
-  );
-  usingNoviopusMenuBusiness.links[2].title = i18n.t(
-    "navigation.constants.account-type",
-    { ns: "navigation" }
-  );
-  usingNoviopusMenuBusiness.links[3].title = i18n.t(
-    "navigation.constants.home-page",
-    { ns: "navigation" }
-  );
-  usingNoviopusMenuBusiness.links[4].title = i18n.t(
-    "navigation.constants.company",
-    { ns: "navigation" }
-  );
-  usingNoviopusMenuBusiness.links[5].title = i18n.t(
-    "navigation.constants.jobs",
-    { ns: "navigation" }
-  );
-  usingNoviopusMenuBusiness.links[6].title = i18n.t(
-    "navigation.constants.candidate-profile",
-    { ns: "navigation" }
-  );
-  usingNoviopusMenuBusiness.links[7].title = i18n.t(
-    "navigation.constants.candidates",
-    { ns: "navigation" }
-  );
-  usingNoviopusMenuBusiness.links[8].title = i18n.t(
-    "navigation.constants.ad-campaigns",
-    { ns: "navigation" }
-  );
-  usingNoviopusMenuBusiness.links[9].title = i18n.t(
-    "navigation.constants.reports",
-    { ns: "navigation" }
-  );
-  usingNoviopusMenuBusiness.links[10].title = i18n.t(
-    "navigation.constants.settings",
-    { ns: "navigation" }
-  );
+ 
 }
 
 export const faqMenuBusiness = {
@@ -1208,44 +920,8 @@ export const faqMenuBusiness = {
   backTitle: "constants.home",
   links: [
     {
-      href: "/help/business/faq?id=new-account",
+      href: "/help/business/faq",
       title: "constants.newAccount",
-    },
-    {
-      href: "/help/business/faq?id=confirm-email",
-      title: "constants.confirmEmail",
-    },
-    {
-      href: "/help/business/faq?id=confirm-email-issues",
-      title: "constants.confirmEmailIssues",
-    },
-    { href: "/help/business/faq?id=sign-in", title: "constants.signIn" },
-    {
-      href: "/help/business/faq?id=reset-password",
-      title: "constants.resetPassword",
-    },
-    {
-      href: "/help/business/faq?id=create-company",
-      title: "constants.createCompany",
-    },
-    { href: "/help/business/faq?id=create-job", title: "constants.createJob" },
-    { href: "/help/business/faq?id=manage-job", title: "constants.manageJob" },
-    {
-      href: "/help/business/faq?id=account-settings",
-      title: "constants.accountSettings",
-    },
-    {
-      href: "/help/business/faq?id=change-password",
-      title: "constants.changePassword",
-    },
-    { href: "/help/business/faq?id=languages", title: "constants.languages" },
-    {
-      href: "/help/business/faq?id=suspend-account",
-      title: "constants.suspendAccount",
-    },
-    {
-      href: "/help/business/faq?id=delete-account",
-      title: "constants.deleteAccount",
     },
   ],
 };
@@ -1257,50 +933,6 @@ function faqMenuBusinessUpdate() {
   faqMenuBusiness.links[0].title = i18n.t("navigation.constants.new-account", {
     ns: "navigation",
   });
-  faqMenuBusiness.links[1].title = i18n.t(
-    "navigation.constants.confirm-email",
-    { ns: "navigation" }
-  );
-  faqMenuBusiness.links[2].title = i18n.t(
-    "navigation.constants.confirm-email-issues",
-    { ns: "navigation" }
-  );
-  faqMenuBusiness.links[3].title = i18n.t("navigation.constants.sign-in", {
-    ns: "navigation",
-  });
-  faqMenuBusiness.links[4].title = i18n.t(
-    "navigation.constants.reset-password",
-    { ns: "navigation" }
-  );
-  faqMenuBusiness.links[5].title = i18n.t(
-    "navigation.constants.create-company",
-    { ns: "navigation" }
-  );
-  faqMenuBusiness.links[6].title = i18n.t("navigation.constants.create-job", {
-    ns: "navigation",
-  });
-  faqMenuBusiness.links[7].title = i18n.t("navigation.constants.manage-job", {
-    ns: "navigation",
-  });
-  faqMenuBusiness.links[8].title = i18n.t(
-    "navigation.constants.account-settings",
-    { ns: "navigation" }
-  );
-  faqMenuBusiness.links[9].title = i18n.t(
-    "navigation.constants.change-password",
-    { ns: "navigation" }
-  );
-  faqMenuBusiness.links[10].title = i18n.t("navigation.constants.languages", {
-    ns: "navigation",
-  });
-  faqMenuBusiness.links[11].title = i18n.t(
-    "navigation.constants.suspend-account",
-    { ns: "navigation" }
-  );
-  faqMenuBusiness.links[12].title = i18n.t(
-    "navigation.constants.delete-account",
-    { ns: "navigation" }
-  );
 }
 
 export const helpMenuLinks = [
@@ -1362,6 +994,7 @@ if (i18n.isInitialized) {
   usingNoviopusMenuBusinessUpdate();
   faqMenuBusinessUpdate();
   helpMenuUpdate();
+  helpMenuBusinessUpdate()
   privacyTermsMenuUpdate();
   businessMenuUpdate();
   resourcesMenuUpdate();
@@ -1377,6 +1010,7 @@ i18n.on("languageChanged", () => {
   signedInCareerMenuUpdate();
   careerMenuUpdate();
   helpMenuupdate();
+  helpMenuBusinessUpdate()
   usingNoviopusMenuCareerUpdate();
   faqMenuCareerUpdate();
   usingNoviopusMenuBusinessUpdate();
@@ -1398,6 +1032,7 @@ i18n.on("loaded", function () {
   signedInCareerMenuUpdate();
   careerMenuUpdate();
   helpMenuupdate();
+  helpMenuBusinessUpdate()
   usingNoviopusMenuCareerUpdate();
   faqMenuCareerUpdate();
   usingNoviopusMenuBusinessUpdate();
@@ -1427,67 +1062,59 @@ export const getRoutes = (lng: any) => [
     menu: careerMenu,
   },
   {
-    path: `/${lng}/career`,
+    path: `/${lng}/citizenship`,
     menu: careerMenu,
   },
   {
-    path: `/${lng}/career/ai`,
+    path: `/${lng}/citizenship/eu`,
     menu: careerMenu,
   },
   {
-    path: `/${lng}/career/smart-search`,
+    path: `/${lng}/citizenship/legalization`,
     menu: careerMenu,
   },
   {
-    path: `/${lng}/career/salary-workplace`,
+    path: `/${lng}/citizenship/pass-ua`,
     menu: careerMenu,
   },
   {
-    path: `/${lng}/career/company-reviews`,
+    path: `/${lng}/citizenship/pass-ru`,
     menu: careerMenu,
   },
   {
-    path: `/${lng}/career/referrals-connections`,
-    menu: careerMenu,
-  },
-  {
-    path: `/${lng}/career/application-statuses`,
-    menu: careerMenu,
-  },
-  {
-    path: `/${lng}/business`,
+    path: `/${lng}/documents`,
     menu: businessMenu,
   },
   {
-    path: `/${lng}/business/recruitment-ai`,
+    path: `/${lng}/documents/ren-pas`,
     menu: businessMenu,
   },
   {
-    path: `/${lng}/business/targeted-campaigns`,
+    path: `/${lng}/documents/certificates`,
     menu: businessMenu,
   },
   {
-    path: `/${lng}/business/company-branding`,
+    path: `/${lng}/documents/driver-license`,
     menu: businessMenu,
   },
   {
-    path: `/${lng}/business/plans`,
+    path: `/${lng}/documents/plans`,
     menu: businessMenu,
   },
   {
-    path: `/${lng}/business/pay-per-applicant`,
+    path: `/${lng}/documents/pay-per-applicant`,
     menu: businessMenu,
   },
   {
-    path: `/${lng}/resources/articles`,
+    path: `/${lng}/search-human/bio`,
     menu: resourcesMenu,
   },
   {
-    path: `/${lng}/resources/forum`,
+    path: `/${lng}/search-human/geo`,
     menu: resourcesMenu,
   },
   {
-    path: `/${lng}/resources`,
+    path: `/${lng}/search-human`,
     menu: resourcesMenu,
   },
   {
@@ -1495,68 +1122,12 @@ export const getRoutes = (lng: any) => [
     menu: aboutMenu,
   },
   {
-    path: `/${lng}/about/team`,
+    path: `/${lng}/about/articles`,
     menu: aboutMenu,
   },
   {
-    path: `/${lng}/about/offices`,
+    path: `/${lng}/about/forum`,
     menu: aboutMenu,
-  },
-  {
-    path: `/${lng}/about/investors`,
-    menu: aboutMenu,
-  },
-  {
-    path: `/${lng}/about/partners`,
-    menu: aboutMenu,
-  },
-  {
-    path: `/${lng}/about/contact`,
-    menu: aboutMenu,
-  },
-  {
-    path: `/${lng}/account/profile/edit`,
-    menu: settingsMenu,
-  },
-  {
-    path: `/${lng}/account/upload/edit`,
-    menu: careerProfileMenu,
-  },
-  {
-    path: `/${lng}/account/education/edit`,
-    menu: careerProfileMenu,
-  },
-  {
-    path: `/${lng}/account/experience/edit`,
-    menu: careerProfileMenu,
-  },
-  {
-    path: `/${lng}/account/skills/edit`,
-    menu: careerProfileMenu,
-  },
-  {
-    path: `/${lng}/account/languages/edit`,
-    menu: careerProfileMenu,
-  },
-  {
-    path: `/${lng}/account/network/edit`,
-    menu: socialProfileMenu,
-  },
-  {
-    path: `/${lng}/account/add-contacts/edit`,
-    menu: socialProfileMenu,
-  },
-  {
-    path: `/${lng}/account/interests/edit`,
-    menu: socialProfileMenu,
-  },
-  {
-    path: `/${lng}/account/job-search/edit`,
-    menu: jobPreferencesMenu,
-  },
-  {
-    path: `/${lng}/account/workplace/edit`,
-    menu: jobPreferencesMenu,
   },
   {
     path: `/${lng}/career/job-search/edit`,
@@ -1591,7 +1162,7 @@ export const getRoutes = (lng: any) => [
     menu: helpMenu,
   },
   {
-    path: `/${lng}/help/career`,
+    path: `/${lng}/help/personal`,
     menu: careerHelpMenu,
   },
   {
@@ -1599,44 +1170,24 @@ export const getRoutes = (lng: any) => [
     menu: businessHelpMenu,
   },
   {
-    path: `/${lng}/help/career/using-noviopus`,
-    menu: usingNoviopusMenuCareer,
-  },
-  {
-    path: `/${lng}/help/career/using-noviopus/general`,
-    menu: usingNoviopusMenuCareer,
-  },
-  {
-    path: `/${lng}/help/career/using-noviopus/create-an-account`,
-    menu: usingNoviopusMenuCareer,
-  },
-  {
-    path: `/${lng}/help/career/using-noviopus/create-your-profile`,
-    menu: usingNoviopusMenuCareer,
-  },
-  {
-    path: `/${lng}/help/career/using-noviopus/career`,
-    menu: usingNoviopusMenuCareer,
-  },
-  {
-    path: `/${lng}/help/career/using-noviopus/settings`,
-    menu: usingNoviopusMenuCareer,
-  },
-  {
-    path: `/${lng}/help/career/faq`,
-    menu: faqMenuCareer,
-  },
-  {
-    path: `/${lng}/help/career/contact`,
+    path: `/${lng}/help/personal/information`,
     menu: careerHelpMenu,
   },
   {
-    path: `/${lng}/help/business/using-noviopus`,
-    menu: usingNoviopusMenuBusiness,
+    path: `/${lng}/help/personal/faq`,
+    menu: careerHelpMenu,
+  },
+  {
+    path: `/${lng}/help/personal/contact`,
+    menu: careerHelpMenu,
+  },
+  {
+    path: `/${lng}/help/business/information`,
+    menu: businessHelpMenu,
   },
   {
     path: `/${lng}/help/business/faq`,
-    menu: faqMenuBusiness,
+    menu: businessHelpMenu,
   },
   {
     path: `/${lng}/help/business/contact`,
@@ -1644,7 +1195,3 @@ export const getRoutes = (lng: any) => [
   },
 ];
 
-// export const systemLanguages = [
-//   { name: "English", value: "en" },
-//   { name: "Hebrew", value: "he" },
-// ];

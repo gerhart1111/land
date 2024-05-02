@@ -1,5 +1,5 @@
 {
-  "navigation.constants.home": "Дом",
+  "navigation.constants.home": "Домой",
   "navigation.constants.career": "Гражданство",
   "navigation.constants.business": "Помощь с документами",
   "navigation.constants.resources": "Поиск человека",
@@ -44,25 +44,38 @@
   "navigation.constants.account-settings": "Настройки учетной записи",
   "navigation.constants.suspend-account": "Приостановить учетную запись",
   "navigation.constants.delete-account": "Удалить аккаунт",
-  "navigation.constants.recruitmentAI": "ИИ-рекрутинг",
-  "navigation.constants.targetedJobCampaigns": "Целевые кампании по трудоустройству",
-  "navigation.constants.companyBranding": "Брендинг компании",
+
+  "navigation.constants.recruitmentAI": "Восстановление паспорта",
+  "navigation.constants.targetedJobCampaigns": "Получение свидетельств",
+  "navigation.constants.companyBranding": "Водительские права",
+
   "navigation.constants.freeAndPremiumPlans": "Бесплатные и Премиум-планы",
   "navigation.constants.payPerApplicantPricing": "Оплата за каждого заявителя",
-  "navigation.constants.careerAi": "Карьера ИИ",
-  "navigation.constants.smartJobSearch": "Умный поиск работы",
-  "navigation.constants.salaryAndWorkplace": "Заработная плата и рабочее место",
-  "navigation.constants.companyReviews": "Отзывы о компании",
+
+  "navigation.constants.careerAi": "Гражданство ЕС",
+  "navigation.constants.smartJobSearch": "Легализация",
+  "navigation.constants.salaryAndWorkplace": "Гражданство Украины",
+  "navigation.constants.companyReviews": "Гражданство России",
+  
   "navigation.constants.referralAndConnections": "Рекомендации и связи",
   "navigation.constants.applicationStatuses": "Статусы приложений",
-  "navigation.constants.articles": "Статьи",
-  "navigation.constants.forum": "Форум",
+
+  "navigation.constants.articles": "Поиск персональной информации",
+  "navigation.constants.forum": "Поиск точного местонахождения",
+
   "navigation.constants.aboutUs": "О нас",
-  "navigation.constants.team": "Команда",
-  "navigation.constants.offices": "Офисы",
-  "navigation.constants.investors": "Инвесторы",
-  "navigation.constants.partners": "Партнеры",
+  "navigation.constants.team": "Статьи",
+  "navigation.constants.offices": "Форум",
+
+  "navigation.constants.contactUsBusiness": "Помощь для физ лиц",
+  "navigation.constants.faqBusiness": "FAQ",
+  "navigation.constants.usingNoviopusBusiness": "Информация",
+  "navigation.constants.careerHelpCenter": "Помощь для физ лиц",
+  "navigation.constants.businessHelpCenter": "Помощь для юр лиц",
+  "navigation.constants.usingNoviopus": "Информация",
+  "navigation.constants.faq": "FAQ",
   "navigation.constants.contactUs": "Связаться с нами",
+
   "navigation.constants.candidate-profile": "Профиль кандидата",
   "navigation.constants.candidates": "Кандидаты",
   "navigation.constants.ad-campaigns": "Рекламные кампании",

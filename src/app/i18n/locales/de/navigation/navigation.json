@@ -44,25 +44,44 @@
   "navigation.constants.account-settings": "Account Einstellungen",
   "navigation.constants.suspend-account": "Konto aussetzen",
   "navigation.constants.delete-account": "Konto löschen",
-  "navigation.constants.recruitmentAI": "KI-Rekrutierung",
-  "navigation.constants.targetedJobCampaigns": "Gezielte Jobkampagnen",
-  "navigation.constants.companyBranding": "Firmenbranding",
+
+  "navigation.constants.recruitmentAI":"Erneuerung des Reisepasses",
+  "navigation.constants.targetedJobCampaigns":"Abrufen von Zertifikaten",
+  "navigation.constants.companyBranding":"Führerschein",
+
   "navigation.constants.freeAndPremiumPlans": "Kostenlose und Premium-Pläne",
   "navigation.constants.payPerApplicantPricing": "Preise pro Bewerber zahlen",
-  "navigation.constants.careerAi": "Karriere-KI",
-  "navigation.constants.smartJobSearch": "Intelligente Jobsuche",
-  "navigation.constants.salaryAndWorkplace": "Gehalt und Arbeitsplatz",
-  "navigation.constants.companyReviews": "Unternehmensbewertungen",
+
+  "navigation.constants.careerAi": "Unionsbürgerschaft",
+  "navigation.constants.smartJobSearch": "Stand der Legalisierung",
+  "navigation.constants.salaryAndWorkplace": "Staatsbürgerschaft Ukraine",
+  "navigation.constants.companyReviews": "Staatsbürgerschaft Russland",
+
   "navigation.constants.referralAndConnections": "Empfehlung und Verbindungen",
   "navigation.constants.applicationStatuses": "Bewerbungsstatus",
-  "navigation.constants.articles": "Artikel",
-  "navigation.constants.forum": "Forum",
+  
+  "navigation.constants.articles": "Suche nach personenbezogenen Daten",
+  "navigation.constants.forum": "Den genauen Standort finden",
+
+  "navigation.constants.careerHelpCenter": "Hilfe für Einzelpersonen",
+  "navigation.constants.businessHelpCenter": "Unterstützung für juristische Personen",
+
   "navigation.constants.aboutUs": "Über uns",
-  "navigation.constants.team": "Team",
-  "navigation.constants.offices": "Büros",
+  "navigation.constants.team": "Artikel",
+  "navigation.constants.offices": "Forum",
+
+  "navigation.constants.usingNoviopus": "Information",
+  "navigation.constants.faq": "FAQ",
+  "navigation.constants.contactUs": "Kontaktiere uns",
+
+  "navigation.constants.contactUsBusiness": "Kontaktiere uns",
+  "navigation.constants.faqBusiness": "FAQ",
+  "navigation.constants.usingNoviopusBusiness": "Information",
+
+
   "navigation.constants.investors": "Investoren",
   "navigation.constants.partners": "Partner",
-  "navigation.constants.contactUs": "Kontaktiere uns",
+
   "navigation.constants.candidate-profile": "Kandidaten Profil",
   "navigation.constants.candidates": "Kandidaten",
   "navigation.constants.ad-campaigns": "Werbekampagnen",

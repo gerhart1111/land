@@ -45,31 +45,39 @@
   "navigation.constants.suspend-account":"Suspend Account",
   "navigation.constants.delete-account":"Delete Account",
 
-  "navigation.constants.recruitmentAI":"AI Recrutment",
-  "navigation.constants.targetedJobCampaigns":"Targeted Job Campaigns",
-  "navigation.constants.companyBranding":"Company Branding",
+  "navigation.constants.recruitmentAI":"Passport renewal",
+  "navigation.constants.targetedJobCampaigns":"Retrieving Certificates",
+  "navigation.constants.companyBranding":"Driver's license",
+
   "navigation.constants.freeAndPremiumPlans":"Free And Premium Plans",
   "navigation.constants.payPerApplicantPricing":"Pay Per Applicant Pricing",
 
-  "navigation.constants.careerAi":"Career AI",
-  "navigation.constants.smartJobSearch":"Smart Job Search",
-  "navigation.constants.salaryAndWorkplace":"Salary And Workplace",
-  "navigation.constants.companyReviews":"Company Reviews",
+  "navigation.constants.careerAi":"Citizenship EU",
+  "navigation.constants.smartJobSearch":"Status of legalization",
+  "navigation.constants.salaryAndWorkplace":"Citizenship Ukraine",
+  "navigation.constants.companyReviews":"Citizenship Russia",
   "navigation.constants.referralAndConnections":"Referral And Connections",
   "navigation.constants.applicationStatuses":"Application Statuses",
-  "navigation.constants.articles":"Articles",
-  "navigation.constants.forum":"Forum",
+  
+  "navigation.constants.articles":"Searching for Personal Information",
+  "navigation.constants.forum":"Finding the Exact Location",
 
   "navigation.constants.aboutUs":"About Us",
-  "navigation.constants.team":"Team",
-  "navigation.constants.offices":"Offices",
-  "navigation.constants.investors":"Investors",
-  "navigation.constants.partners":"Partners",
-  "navigation.constants.contactUs":"Contact Us",
+  "navigation.constants.team":"Articles",
+  "navigation.constants.offices":"Forum",
 
 
+  "navigation.constants.careerHelpCenter": "Help for individuals",
+  "navigation.constants.businessHelpCenter": "Assistance for legal entities",
 
-  
+  "navigation.constants.usingNoviopus": "Information",
+  "navigation.constants.faq": "FAQ",
+  "navigation.constants.contactUs": "Contact Us",
+
+  "navigation.constants.contactUsBusiness": "Contact Us",
+  "navigation.constants.faqBusiness": "FAQ",
+  "navigation.constants.usingNoviopusBusiness": "Information",
+
 
   "navigation.constants.candidate-profile":"Candidate Profile",
   "navigation.constants.candidates":"Candidates",
