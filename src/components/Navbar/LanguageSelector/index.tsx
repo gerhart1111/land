@@ -109,7 +109,6 @@ const LanguageSelector: FC<LanguageSelectorProps> = ({
     onClose && onClose();
     setShowMobileLangSelector(false);
   };
-  console.log(isDesktop);
   return (
     <div className={localStyles.container}>
       <Box

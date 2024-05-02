@@ -19,11 +19,9 @@ import { mapLanguageToCountryCode } from "../Navbar/LanguageSelector/countryCode
 const Navigation = ({
   lng,
   languages,
-  isDesktop
 }: {
   lng: any;
   languages: language[];
-  isDesktop: boolean
 }) => {
   const [currentLanguage, setCurrentLanguage] = useState<language | undefined>({
     value: "en",
