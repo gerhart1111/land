@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useEffect, useState } from "react";
+import { MutableRefObject, Suspense, useEffect, useState } from "react";
 import styles from "./Navbar.module.scss";
 import { Autocomplete, Button, InputAdornment, TextField } from "@mui/material";
 import { useRouter, usePathname } from "next/navigation";
@@ -23,6 +23,7 @@ import Loader from "@/app/[lng]/loader";
 import { useTranslation } from "@/app/i18n/client";
 import { CircleFlag } from "react-circle-flags";
 import { mapLanguageToCountryCode } from "./LanguageSelector/countryCodeMapper";
+import Navigation from "../Navigation";
 
 interface NavbarProps {
   lng: any;
@@ -34,6 +35,7 @@ const Navbar = ({ lng, languages }: NavbarProps) => {
   const pathname = usePathname();
 
   const [showLangSelector, setShowLangSelector] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
   const isMobileFormat = useMediaQuery("(max-width: 959px)");
   const [isFocused, setIsFocused] = useState<boolean>(false);
@@ -54,8 +56,14 @@ const Navbar = ({ lng, languages }: NavbarProps) => {
     router.replace(query);
   };
 
+  const handleMenuOpen = () => {
+    setMenuOpen((prev) => !prev);
+  };
+
   return (
     <>
+      {menuOpen && <Navigation languages={languages} lng={lng} />
+      }
       <div className={styles.container}>
         <div className={styles.navbar}>
           <div className={styles.navbarLeft}>
@@ -110,7 +118,7 @@ const Navbar = ({ lng, languages }: NavbarProps) => {
             </div>
           ) : (
             <>
-              <IconButton>
+              <IconButton onClick={handleMenuOpen}>
                 <MenuIcon style={{ color: "#485C6E" }} />
               </IconButton>
             </>

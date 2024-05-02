@@ -4,7 +4,7 @@ import React, { useState, useEffect, Suspense } from "react";
 import styles from "./Navigation.module.scss";
 import clsx from "clsx";
 import InputBase from "@mui/material/InputBase";
-import LanguageIcon from "@mui/icons-material/Language";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import { getRoutes, gradient } from "./constants";
 import Link from "next/link";
 import { match } from "node-match-path";
@@ -30,6 +30,7 @@ const Navigation = ({
   });
   const [showLangSelector, setShowLangSelector] = useState(false);
   const [activeLink, setActiveLink] = useState<string | null>("");
+  const isMobileFormat = useMediaQuery("(max-width: 959px)");
 
   const localStorageLanguage =
     typeof window !== "undefined" && localStorage.getItem("language");
@@ -49,7 +50,7 @@ const Navigation = ({
     if (languages) {
       setCurrentLanguage(languages.find((l) => l.value === lng));
     }
-  }, [languages]);
+  }, [languages, lng]);
 
   useEffect(() => {
     setActiveLink(path);
@@ -67,33 +68,62 @@ const Navigation = ({
   }, [showLangSelector]);
 
   return (
-    <div className={styles.navigation}>
+    <div
+      className={
+        !isMobileFormat
+          ? styles.navigation
+          : `${styles.navigationMobile} ${styles.active}`
+      }
+    >
       {menu?.backRoute && (
         <Link className={styles.back} href={`/${lng}${menu.backRoute}`}>
           <ChevronLeft />
           {t("navigation.constants.home")}
         </Link>
       )}
-      <div className={styles.links}>
-        {menu?.links.map((link: any, i: number) => (
-          <Link
-            href={`/${lng}${link.href}`}
-            key={i}
-            className={
-              link.href === "/" || `/${lng}${link.href}` === activeLink
-                ? clsx(styles.menuItem, styles.menuItemActive)
-                : styles.menuItem
-            }
-          >
-            {link.href === "/" || `/${lng}${link.href}` === activeLink ? (
-              <div className={styles.activeIcon}>{link.activeIcon}</div>
-            ) : (
-              link.icon
-            )}
-            {`${link.title}`}
-          </Link>
-        ))}
-      </div>
+      {isMobileFormat ? (
+        <div className={styles.link}>
+          {menu?.links.map((link: any, i: number) => (
+            <Link
+              href={`/${lng}${link.href}`}
+              key={i}
+              className={
+                link.href === "/" || `/${lng}${link.href}` === activeLink
+                  ? clsx(styles.menuItem, styles.menuItemActive)
+                  : styles.menuItem
+              }
+            >
+              {link.href === "/" || `/${lng}${link.href}` === activeLink ? (
+                <div className={styles.activeIcon}>{link.activeIcon}</div>
+              ) : (
+                link.icon
+              )}
+              {`${link.title}`}
+            </Link>
+          ))}
+        </div>
+      ) : (
+        <div className={styles.links}>
+          {menu?.links.map((link: any, i: number) => (
+            <Link
+              href={`/${lng}${link.href}`}
+              key={i}
+              className={
+                link.href === "/" || `/${lng}${link.href}` === activeLink
+                  ? clsx(styles.menuItem, styles.menuItemActive)
+                  : styles.menuItem
+              }
+            >
+              {link.href === "/" || `/${lng}${link.href}` === activeLink ? (
+                <div className={styles.activeIcon}>{link.activeIcon}</div>
+              ) : (
+                link.icon
+              )}
+              {`${link.title}`}
+            </Link>
+          ))}
+        </div>
+      )}
       <div className={styles.footer}>
         <div className={styles.footerMainItems}>
           <Link
