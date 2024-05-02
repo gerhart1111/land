@@ -62,7 +62,7 @@ const Navbar = ({ lng, languages }: NavbarProps) => {
 
   return (
     <>
-      {menuOpen && <Navigation languages={languages} lng={lng} isDesktop={false}/>}
+      {menuOpen && <Navigation languages={languages} lng={lng}/>}
       <div className={styles.container}>
         <div className={styles.navbar}>
           <div className={styles.navbarLeft}>
@@ -105,7 +105,7 @@ const Navbar = ({ lng, languages }: NavbarProps) => {
                   lng={lng}
                   languages={languages}
                   setShowMobileLangSelector={setShowLangSelector}
-                  isDesktop
+                  isDesktop={!isMobileFormat}
                 />
               )}
               <IconButton onClick={() => setShowLangSelector(true)}>
