@@ -19,9 +19,11 @@ import { mapLanguageToCountryCode } from "../Navbar/LanguageSelector/countryCode
 const Navigation = ({
   lng,
   languages,
+  isDesktop
 }: {
   lng: any;
   languages: language[];
+  isDesktop: boolean
 }) => {
   const [currentLanguage, setCurrentLanguage] = useState<language | undefined>({
     value: "en",
@@ -146,10 +148,10 @@ const Navigation = ({
           </Link>
           {showLangSelector && (
             <LanguageSelector
-              lng={mapLanguageToCountryCode(lng)}
+              lng={lng}
               languages={languages}
               setShowMobileLangSelector={setShowLangSelector}
-              isDesktop
+              isDesktop={!isMobileFormat}
             />
           )}
           <div className={styles.footerItem}>

@@ -109,65 +109,58 @@ const LanguageSelector: FC<LanguageSelectorProps> = ({
     onClose && onClose();
     setShowMobileLangSelector(false);
   };
-
+  console.log(isDesktop);
   return (
     <div className={localStyles.container}>
       <Box
         sx={{
-          width: "802px",
           height: "100%",
           display: "flex",
-          flexDirection: "row",
+          flexDirection: "column",
           alignItems: "flex-start",
           pr: "16px",
           pl: "16px",
-          mr: direction === "rtl" ? "0" : "330px",
-          ml: direction === "rtl" ? "330px" : "0",
         }}
       >
-        {isDesktop && (
-          <Box
+        <Box
+          sx={{
+            width: "100%",
+            maxWidth: "260px",
+          }}
+        >
+          <Typography
             sx={{
-              pr: "24px",
-              pl: "16px",
-              width: "100%",
-              maxWidth: "260px",
+              fontSize: "20px",
+              letterSpacing: "0.86px",
+              lineHeight: "30px",
+              textAlign: "left",
+              color: theme.palette.secondary.main,
+              whiteSpace: "nowrap",
+              textAlignLast: "center",
+              mb: "20px",
             }}
           >
-            <Typography
-              sx={{
-                fontSize: "20px",
-                letterSpacing: "0.86px",
-                lineHeight: "30px",
-                textAlign: "left",
-                color: theme.palette.secondary.main,
-                whiteSpace: "nowrap",
-              }}
-            >
-              {t("navbar.select-language.title")}
-            </Typography>
-            <IconButton
-              onClick={() => setShowMobileLangSelector(false)}
-              sx={{
-                margin: 0,
-                padding: "12px",
-                position: "absolute",
-                right: "16px",
-                top: "16px",
-              }}
-            >
-              <CloseIcon />
-            </IconButton>
-          </Box>
-        )}
+            {t("navbar.select-language.title")}
+          </Typography>
+          <IconButton
+            onClick={() => setShowMobileLangSelector(false)}
+            sx={{
+              margin: 0,
+              padding: "12px",
+              position: "absolute",
+              right: "16px",
+              top: "16px",
+            }}
+          >
+            <CloseIcon />
+          </IconButton>
+        </Box>
 
         <Box
           sx={{
             height: "100%",
-            width: "536px",
             display: "flex",
             flexDirection: "column",
-            padding: "0 70px",
           }}
         >
           <Box
@@ -229,53 +222,6 @@ const LanguageSelector: FC<LanguageSelectorProps> = ({
               width: "100%",
               padding: "0 16px",
               height: "75%",
-              overflowY: "scroll",
-              "&::-webkit-scrollbar": {
-                width: "24px",
-                borderRadius: "5px",
-                backgroundColor: "#f1f1f1",
-              },
-              "&::-webkit-scrollbar-track": {
-                background: "#ffffff",
-                border: `1px solid rgba(72, 92, 110, 0.5)`,
-              },
-
-              "&::-webkit-scrollbar-thumb": {
-                backgroundColor: theme.palette.text.secondary,
-                border: "8px solid transparent",
-                backgroundClip: "padding-box",
-                borderRadius: "16px",
-                height: "72px",
-              },
-              "&::-webkit-scrollbar-thumb:hover": {
-                backgroundColor: "#b0b0b0",
-                border: "8px solid transparent",
-                backgroundClip: "padding-box",
-              },
-              "&::-webkit-scrollbar-button:decrement": {
-                backgroundImage: `url(${arrowUp})`,
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-                backgroundSize: "12px",
-                backgroundColor: "#ffffff",
-                border: `1px solid rgba(72, 92, 110, 0.5)`,
-                borderRadius: "5px 5px 0 0",
-                borderBottom: "none",
-                height: "20px",
-              },
-              "&::-webkit-scrollbar-button:increment": {
-                backgroundImage: `url(${arrowDown})`,
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-                backgroundSize: "12px",
-                backgroundColor: "#ffffff",
-                border: `1px solid rgba(19, 78, 95, 0.5)`,
-                borderRadius: "0 0 5px 5px",
-                borderTop: "none",
-                height: "20px",
-              },
-              scrollbarWidth: "thin",
-              scrollbarColor: "darkgrey #f1f1f1",
             }}
           >
             {searchResults.map((item, index) => {

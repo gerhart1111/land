@@ -62,8 +62,7 @@ const Navbar = ({ lng, languages }: NavbarProps) => {
 
   return (
     <>
-      {menuOpen && <Navigation languages={languages} lng={lng} />
-      }
+      {menuOpen && <Navigation languages={languages} lng={lng} isDesktop={false}/>}
       <div className={styles.container}>
         <div className={styles.navbar}>
           <div className={styles.navbarLeft}>
