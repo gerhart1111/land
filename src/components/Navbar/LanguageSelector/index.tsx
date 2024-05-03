@@ -162,6 +162,7 @@ const LanguageSelector: FC<LanguageSelectorProps> = ({
             flexDirection: "column",
           }}
         >
+          {isDesktop && 
           <Box
             sx={{
               alignItems: "center",
@@ -214,7 +215,7 @@ const LanguageSelector: FC<LanguageSelectorProps> = ({
                 },
               }}
             />
-          </Box>
+          </Box>}
 
           <Box
             sx={{

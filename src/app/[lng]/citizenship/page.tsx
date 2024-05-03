@@ -1,4 +1,3 @@
-import Career from "@/components/pages/Career/Career";
 
 interface CareerPageProps {
   params: {
@@ -7,9 +6,7 @@ interface CareerPageProps {
 }
 
 const CareerPage: React.FC<CareerPageProps> = ({ params }) => {
-  return (
-    <Career lng={params.lng}/>
-    )
+  return <h1>Citizenship</h1>
 }
 
 export default CareerPage;

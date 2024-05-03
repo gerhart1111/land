@@ -11,7 +11,7 @@ import LanguageIcon from "@mui/icons-material/Language";
 import LoginForm from "./LoginForm/LoginForm";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
+import CloseIcon from '@mui/icons-material/Close';
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import LoginIcon from "@mui/icons-material/Login";
 import PersonAddOutlinedIcon from "@mui/icons-material/PersonAddOutlined";
@@ -69,14 +69,12 @@ const Navbar = ({ lng, languages }: NavbarProps) => {
             <Link href={`/${lng}`}>
               <div className={styles.logo}>
                 <Image src={logo} alt="logo" className={styles.logoImage} />
-                {!isMobileFormat && (
                   <div className={styles.logoText}>
                     <span className={styles.logoBrand}>AlterHelp</span>
                     <span className={styles.logoTitle}>
                       {t("common.landing.logo-title", { ns: "common" })}
                     </span>
                   </div>
-                )}
               </div>
             </Link>
           </div>
@@ -117,9 +115,13 @@ const Navbar = ({ lng, languages }: NavbarProps) => {
             </div>
           ) : (
             <>
+              {!menuOpen ? 
               <IconButton onClick={handleMenuOpen}>
                 <MenuIcon style={{ color: "#485C6E" }} />
-              </IconButton>
+              </IconButton> : 
+              <IconButton onClick={handleMenuOpen}>
+                <CloseIcon style={{ color: "#485C6E" }} />
+              </IconButton>}
             </>
           )}
         </div>

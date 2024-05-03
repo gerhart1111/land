@@ -1,4 +1,3 @@
-import Business from "@/components/pages/Business/Business";
 
 interface BusinessPageProps {
   params: {
@@ -7,9 +6,7 @@ interface BusinessPageProps {
 }
 
 const BusinessPage: React.FC<BusinessPageProps> = ({ params }) => {
-  return (
-    <Business lng={params.lng}/>
-    )
+  return <h1>Documents</h1>
 }
 
 export default BusinessPage;
