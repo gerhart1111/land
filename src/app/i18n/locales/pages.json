@@ -1,10 +1,19 @@
 [
   "common",
-  "jobSearch",
+  "jobsPage",
   "jobSearchResults",
+  "searchForm",
   "mediaComponent",
+  "loginForm",
   "navbar",
   "post",
   "sidebar",
-  "navigation"
+  "navigation",
+  "terms",
+  "search",
+  "privacy",
+  "information",
+  "faq",
+  "documents",
+  "citizenship"
 ]

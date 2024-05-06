@@ -78,6 +78,7 @@ const Table = ({ lng }: TableProps) => {
 
   return (
     <div className="max-w-3xl mx-auto">
+      <h1>{t("faq.title", { ns: "faq" })}</h1>
       <TableRow
         title={t("faq.head", { ns: "faq" })}
         content={

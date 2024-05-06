@@ -11,7 +11,6 @@ import { match } from "node-match-path";
 import LanguageSelector from "../Navbar/LanguageSelector";
 import { language } from "../../types/theme";
 import { usePathname } from "next/navigation";
-import Loader from "@/app/[lng]/loader";
 import { useTranslation } from "@/app/i18n/client";
 import { CircleFlag } from "react-circle-flags";
 import { mapLanguageToCountryCode } from "../Navbar/LanguageSelector/countryCodeMapper";
