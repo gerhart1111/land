@@ -1,0 +1,42 @@
+.bordercontainer {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.title {
+    font-weight: 600;
+    color: #333;
+}
+
+.icon {
+    transition: transform 0.5s;
+    font-size: 1.2rem;
+}
+
+.icon.open {
+    transform: rotate(180deg);
+}
+
+.dropdowncontent {
+    padding: 1rem;
+    border-top: 1px solid #ccc;
+    font-size: 14px;
+    color: #333;
+    max-height: 20rem;
+    overflow-y: auto;
+}
+
+.dropdowncontent.closed {
+    max-height: 0;
+    overflow: hidden;
+}

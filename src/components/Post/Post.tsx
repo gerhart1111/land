@@ -9,6 +9,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "@/app/i18n/client";
+import OptionMenu from "../OptionMenu";
 
 const Post = ({ lng }: any) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -74,19 +75,15 @@ const Post = ({ lng }: any) => {
         </div>
       </div>
       <div className={styles.container__cardFooter}>
+      <Link href={`/${lng}/about/articles/123123124`}>
         <Button className={styles.button__view}>
           <VisibilityOutlinedIcon />
           <span>{t("common.view", { ns: "common" })}</span>
         </Button>
-        <Button className={styles.button__share}>
-          <ShareIcon /> <span>{t("common.share", { ns: "common" })}</span>
-        </Button>
-        <Link href={`/${lng}/contentpage/123123124`}>
-          <Button className={styles.button__share}>
-            <ShareIcon />
-            <span>{t("common.show.full.article", { ns: "common" })}</span>
-          </Button>
-        </Link>
+      </Link>
+      <Button className={styles.button__share}>
+        <ShareIcon /> <span>{t("common.share", { ns: "common" })}</span>
+      </Button>
       </div>
     </div>
   );

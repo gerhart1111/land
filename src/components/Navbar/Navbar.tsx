@@ -8,10 +8,9 @@ import logo from "../../assets/images/logo2.svg";
 import SearchIcon from "@mui/icons-material/Search";
 import IconButton from "@mui/material/IconButton";
 import LanguageIcon from "@mui/icons-material/Language";
-import LoginForm from "./LoginForm/LoginForm";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from '@mui/icons-material/Close';
+import CloseIcon from "@mui/icons-material/Close";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import LoginIcon from "@mui/icons-material/Login";
 import PersonAddOutlinedIcon from "@mui/icons-material/PersonAddOutlined";
@@ -62,19 +61,19 @@ const Navbar = ({ lng, languages }: NavbarProps) => {
 
   return (
     <>
-      {menuOpen && <Navigation languages={languages} lng={lng}/>}
+      {menuOpen && <Navigation languages={languages} lng={lng} />}
       <div className={styles.container}>
         <div className={styles.navbar}>
           <div className={styles.navbarLeft}>
             <Link href={`/${lng}`}>
               <div className={styles.logo}>
                 <Image src={logo} alt="logo" className={styles.logoImage} />
-                  <div className={styles.logoText}>
-                    <span className={styles.logoBrand}>AlterHelp</span>
-                    <span className={styles.logoTitle}>
-                      {t("common.landing.logo-title", { ns: "common" })}
-                    </span>
-                  </div>
+                <div className={styles.logoText}>
+                  <span className={styles.logoBrand}>AlterHelp</span>
+                  <span className={styles.logoTitle}>
+                    {t("common.landing.logo-title", { ns: "common" })}
+                  </span>
+                </div>
               </div>
             </Link>
           </div>
@@ -115,13 +114,15 @@ const Navbar = ({ lng, languages }: NavbarProps) => {
             </div>
           ) : (
             <>
-              {!menuOpen ? 
-              <IconButton onClick={handleMenuOpen}>
-                <MenuIcon style={{ color: "#485C6E" }} />
-              </IconButton> : 
-              <IconButton onClick={handleMenuOpen}>
-                <CloseIcon style={{ color: "#485C6E" }} />
-              </IconButton>}
+              {!menuOpen ? (
+                <IconButton onClick={handleMenuOpen}>
+                  <MenuIcon style={{ color: "#485C6E" }} />
+                </IconButton>
+              ) : (
+                <IconButton onClick={handleMenuOpen}>
+                  <CloseIcon style={{ color: "#485C6E" }} />
+                </IconButton>
+              )}
             </>
           )}
         </div>

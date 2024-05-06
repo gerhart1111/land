@@ -568,12 +568,9 @@ function careerMenuUpdate() {
       ns: "navigation",
     }
   );
-  careerMenu.links[3].title = i18n.t(
-    "navigation.constants.companyReviews",
-    {
-      ns: "navigation",
-    }
-  );
+  careerMenu.links[3].title = i18n.t("navigation.constants.companyReviews", {
+    ns: "navigation",
+  });
 }
 
 export const businessMenu = {
@@ -582,7 +579,7 @@ export const businessMenu = {
   links: [
     {
       title: i18n.t("navigation.constants.recruitmentAI"),
-      href: "/documents/ren-pas",
+      href: "/documents/visas",
       icon: <PsychologyIcon sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
@@ -632,7 +629,6 @@ function businessMenuUpdate() {
   businessMenu.links[2].title = i18n.t("navigation.constants.companyBranding", {
     ns: "navigation",
   });
-
 }
 
 export const resourcesMenu = {
@@ -725,7 +721,6 @@ function aboutMenuUpdate() {
   resourcesMenu.links[1].title = i18n.t("navigation.constants.forum", {
     ns: "navigation",
   });
- 
 }
 
 export const helpMenu = {
@@ -734,7 +729,7 @@ export const helpMenu = {
   links: [
     {
       title: i18n.t("navigation.constants.careerHelpCenter"),
-      href: "/help/personal",
+      href: "/help/personal/information",
       icon: <Public sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
@@ -745,7 +740,7 @@ export const helpMenu = {
     },
     {
       title: i18n.t("navigation.constants.businessHelpCenter"),
-      href: "/help/business",
+      href: "/help/business/information",
       icon: <Business sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
@@ -839,20 +834,36 @@ export const businessHelpMenu = {
 
 function helpMenuupdate() {
   helpMenu.backTitle = i18n.t("constants.home", { ns: "navigation" });
-  helpMenu.links[0].title = i18n.t("navigation.constants.careerHelpCenter", { ns: "navigation" });
-  helpMenu.links[1].title = i18n.t("navigation.constants.businessHelpCenter", { ns: "navigation" });
+  helpMenu.links[0].title = i18n.t("navigation.constants.careerHelpCenter", {
+    ns: "navigation",
+  });
+  helpMenu.links[1].title = i18n.t("navigation.constants.businessHelpCenter", {
+    ns: "navigation",
+  });
 
-  careerHelpMenu.links[0].title = i18n.t("navigation.constants.usingNoviopus", { ns: "navigation" });
-  careerHelpMenu.links[1].title = i18n.t("navigation.constants.faq", { ns: "navigation" });
-  careerHelpMenu.links[2].title = i18n.t("navigation.constants.contactUs", { ns: "navigation" });
-  
-  
+  careerHelpMenu.links[0].title = i18n.t("navigation.constants.usingNoviopus", {
+    ns: "navigation",
+  });
+  careerHelpMenu.links[1].title = i18n.t("navigation.constants.faq", {
+    ns: "navigation",
+  });
+  careerHelpMenu.links[2].title = i18n.t("navigation.constants.contactUs", {
+    ns: "navigation",
+  });
 }
 
-function helpMenuBusinessUpdate(){
-  businessHelpMenu.links[0].title = i18n.t("navigation.constants.usingNoviopusBusiness", { ns: "navigation" });
-  businessHelpMenu.links[1].title = i18n.t("navigation.constants.faqBusiness", { ns: "navigation" });
-  businessHelpMenu.links[2].title = i18n.t("navigation.constants.contactUsBusiness", { ns: "navigation" });
+function helpMenuBusinessUpdate() {
+  businessHelpMenu.links[0].title = i18n.t(
+    "navigation.constants.usingNoviopusBusiness",
+    { ns: "navigation" }
+  );
+  businessHelpMenu.links[1].title = i18n.t("navigation.constants.faqBusiness", {
+    ns: "navigation",
+  });
+  businessHelpMenu.links[2].title = i18n.t(
+    "navigation.constants.contactUsBusiness",
+    { ns: "navigation" }
+  );
 }
 
 export const usingNoviopusMenuCareer = {
@@ -879,9 +890,7 @@ function usingNoviopusMenuCareerUpdate() {
 export const faqMenuCareer = {
   backRoute: "/",
   backTitle: "constants.home",
-  links: [
-    { href: "/help/career/faq", title: "constants.newAccount" },
-  ],
+  links: [{ href: "/help/career/faq", title: "constants.newAccount" }],
 };
 
 function faqMenuCareerUpdate() {
@@ -912,7 +921,6 @@ function usingNoviopusMenuBusinessUpdate() {
     "navigation.constants.general",
     { ns: "navigation" }
   );
- 
 }
 
 export const faqMenuBusiness = {
@@ -994,7 +1002,7 @@ if (i18n.isInitialized) {
   usingNoviopusMenuBusinessUpdate();
   faqMenuBusinessUpdate();
   helpMenuUpdate();
-  helpMenuBusinessUpdate()
+  helpMenuBusinessUpdate();
   privacyTermsMenuUpdate();
   businessMenuUpdate();
   resourcesMenuUpdate();
@@ -1010,7 +1018,7 @@ i18n.on("languageChanged", () => {
   signedInCareerMenuUpdate();
   careerMenuUpdate();
   helpMenuupdate();
-  helpMenuBusinessUpdate()
+  helpMenuBusinessUpdate();
   usingNoviopusMenuCareerUpdate();
   faqMenuCareerUpdate();
   usingNoviopusMenuBusinessUpdate();
@@ -1032,7 +1040,7 @@ i18n.on("loaded", function () {
   signedInCareerMenuUpdate();
   careerMenuUpdate();
   helpMenuupdate();
-  helpMenuBusinessUpdate()
+  helpMenuBusinessUpdate();
   usingNoviopusMenuCareerUpdate();
   faqMenuCareerUpdate();
   usingNoviopusMenuBusinessUpdate();
@@ -1086,7 +1094,7 @@ export const getRoutes = (lng: any) => [
     menu: businessMenu,
   },
   {
-    path: `/${lng}/documents/ren-pas`,
+    path: `/${lng}/documents/visas`,
     menu: businessMenu,
   },
   {
@@ -1162,7 +1170,7 @@ export const getRoutes = (lng: any) => [
     menu: helpMenu,
   },
   {
-    path: `/${lng}/help/personal`,
+    path: `/${lng}/help/personal/information`,
     menu: careerHelpMenu,
   },
   {
@@ -1194,4 +1202,3 @@ export const getRoutes = (lng: any) => [
     menu: businessHelpMenu,
   },
 ];
-

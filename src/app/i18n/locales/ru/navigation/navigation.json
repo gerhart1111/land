@@ -44,30 +44,23 @@
   "navigation.constants.account-settings": "Настройки учетной записи",
   "navigation.constants.suspend-account": "Приостановить учетную запись",
   "navigation.constants.delete-account": "Удалить аккаунт",
-
-  "navigation.constants.recruitmentAI": "Восстановление паспорта",
+  "navigation.constants.recruitmentAI": "Визы",
   "navigation.constants.targetedJobCampaigns": "Получение свидетельств",
   "navigation.constants.companyBranding": "Водительские права",
-
   "navigation.constants.freeAndPremiumPlans": "Бесплатные и Премиум-планы",
   "navigation.constants.payPerApplicantPricing": "Оплата за каждого заявителя",
-
   "navigation.constants.careerAi": "Гражданство ЕС",
   "navigation.constants.smartJobSearch": "Легализация",
   "navigation.constants.salaryAndWorkplace": "Гражданство Украины",
   "navigation.constants.companyReviews": "Гражданство России",
-  
   "navigation.constants.referralAndConnections": "Рекомендации и связи",
   "navigation.constants.applicationStatuses": "Статусы приложений",
-
   "navigation.constants.articles": "Поиск персональной информации",
   "navigation.constants.forum": "Поиск точного местонахождения",
-
   "navigation.constants.aboutUs": "О нас",
   "navigation.constants.team": "Статьи",
   "navigation.constants.offices": "Форум",
-
-  "navigation.constants.contactUsBusiness": "Помощь для физ лиц",
+  "navigation.constants.contactUsBusiness": "Связаться с нами",
   "navigation.constants.faqBusiness": "FAQ",
   "navigation.constants.usingNoviopusBusiness": "Информация",
   "navigation.constants.careerHelpCenter": "Помощь для физ лиц",
@@ -75,7 +68,6 @@
   "navigation.constants.usingNoviopus": "Информация",
   "navigation.constants.faq": "FAQ",
   "navigation.constants.contactUs": "Связаться с нами",
-
   "navigation.constants.candidate-profile": "Профиль кандидата",
   "navigation.constants.candidates": "Кандидаты",
   "navigation.constants.ad-campaigns": "Рекламные кампании",
