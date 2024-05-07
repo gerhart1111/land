@@ -82,13 +82,13 @@ const Navbar = ({ lng, languages }: NavbarProps) => {
             <div className={styles.navbarButtonWrapper}>
               {!isRegistrationOrSignIn && (
                 <>
-                  <Link href={`/${lng}/account/CreateAccount`}>
+                  <Link href={`/${lng}`}>
                     <Button>
                       <PersonAddOutlinedIcon />
                       {t("navbar.create-account")}
                     </Button>
                   </Link>
-                  <Link href={`/${lng}/account/login`}>
+                  <Link href={`/${lng}`}>
                     <Button>
                       <LoginIcon />
                       {t("navbar.sign-in")}
@@ -140,34 +140,24 @@ const Navbar = ({ lng, languages }: NavbarProps) => {
             <div className={styles.mobileAccountButtons}>
               {!isRegistrationOrSignIn && (
                 <>
-                  <Button
-                    onClick={() =>
-                      handleRedirect(`/${lng}/account/CreateAccount`)
-                    }
-                  >
+                  <Button onClick={() => handleRedirect(`/${lng}`)}>
                     <PersonAddOutlinedIcon />
                     <span>{t("navbar.create-account")}</span>
                   </Button>
-                  <Button
-                    onClick={() => handleRedirect(`/${lng}/account/login`)}
-                  >
+                  <Button onClick={() => handleRedirect(`/${lng}`)}>
                     <LoginIcon />
                     <span>{t("navbar.sign-in")}</span>
                   </Button>
                 </>
               )}
-              {pathname === `/${lng}/account/login` && (
-                <Button
-                  onClick={() =>
-                    handleRedirect(`/${lng}/account/CreateAccount`)
-                  }
-                >
+              {pathname === `/${lng}` && (
+                <Button onClick={() => handleRedirect(`/${lng}`)}>
                   <PersonAddOutlinedIcon />
                   <span>{t("navbar.create-account")}</span>
                 </Button>
               )}
-              {pathname === `/${lng}/account/CreateAccount` && (
-                <Button onClick={() => handleRedirect(`/${lng}/account/login`)}>
+              {pathname === `/${lng}` && (
+                <Button onClick={() => handleRedirect(`/${lng}`)}>
                   <LoginIcon />
                   <span>{t("navbar.sign-in")}</span>
                 </Button>

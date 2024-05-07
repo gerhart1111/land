@@ -43,7 +43,8 @@ const Navigation = ({
   const menu: any = typeof currentRoute !== "string" && currentRoute?.menu;
 
   const isHelpCenter =
-    path === `/${lng}/help/career` || path === `/${lng}/help/business`;
+    path.includes(`/${lng}/help/personal`) ||
+    path.includes(`/${lng}/help/business`);
 
   useEffect(() => {
     if (languages) {
@@ -156,12 +157,12 @@ const Navigation = ({
               countryCode={mapLanguageToCountryCode(lng)}
               height="40"
             />
-            <InputBase
-              value={currentLanguage?.name}
-              placeholder={t("navigation.language")}
+            <div
+              className={styles.languageCursor}
               onClick={() => setShowLangSelector(true)}
-              inputProps={{ readOnly: true }}
-            />
+            >
+              {currentLanguage?.name}
+            </div>
           </div>
         </div>
         <div className={styles.footerBottomItems}>

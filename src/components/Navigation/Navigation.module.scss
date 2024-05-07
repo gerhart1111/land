@@ -135,6 +135,10 @@
     }
   }
 
+  div.languageCursor {
+    cursor: pointer;
+  }
+
   .footerItem,
   .footerItemActive {
     display: flex;

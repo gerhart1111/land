@@ -41,9 +41,9 @@ export function useTranslation(
   const [cookies, setCookie] = useCookies([cookieName]);
   const ret = useTranslationOrg(ns, options);
   const { i18n } = ret;
-  // if (runsOnServerSide && lng && i18n.resolvedLanguage !== lng) {
-  //   i18n.changeLanguage(lng);
-  // } else {
+  if (runsOnServerSide && lng && i18n.resolvedLanguage !== lng) {
+    i18n.changeLanguage(lng);
+  }
   const [activeLng, setActiveLng] = useState(i18n.resolvedLanguage);
   useEffect(() => {
     if (activeLng === i18n.resolvedLanguage) return;
@@ -57,6 +57,6 @@ export function useTranslation(
     if (cookies.i18next === lng) return;
     setCookie(cookieName, lng, { path: "/" });
   }, [lng, cookies.i18next]);
-  // }
+
   return ret;
 }

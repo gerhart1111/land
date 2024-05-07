@@ -55,10 +55,15 @@ const DropdownMenuContent: React.FC<DropdownMenuProps> = ({
   if (contentKey.some((key) => /^text1-|^text2-/.test(key))) {
     return (
       <ul>
-        {contentKey &&
-          contentKey.map((contKey, index) => {
-            return <li key={index}>{t(`faq.${contKey}`, { ns: "faq" })}</li>;
-          })}
+        {contentKey.map((contKey, index) => (
+          <React.Fragment key={index}>
+            {contKey === "text1-1" ? (
+              <strong>{t(`faq.${contKey}`, { ns: "faq" })}</strong>
+            ) : (
+              <li key={index}>{t(`faq.${contKey}`, { ns: "faq" })}</li>
+            )}
+          </React.Fragment>
+        ))}
       </ul>
     );
   }

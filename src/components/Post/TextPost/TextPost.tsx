@@ -1,13 +1,21 @@
+"use client";
 import React from "react";
 import styles from "./TextPost.module.scss";
-import { useTranslation } from "react-i18next";
+
 import Image from "next/image";
+import { useTranslation } from "@/app/i18n/client";
 
-const TextPost = () => {
+interface TextPostProps {
+  lng: string;
+  text: React.ReactNode;
+  title: string;
+  subtitle: string;
+}
 
-  const { t } = useTranslation(['post', 'common'])
+const TextPost = ({ lng, text, title, subtitle }: TextPostProps) => {
+  const { t } = useTranslation(lng, ["post", "common"], TextPost);
 
-  const src = "https://s3-alpha-sig.figma.com/img/6849/c00c/fd480759cefdac75331181d45457dcc8?Expires=1694995200&Signature=F0zqC8a2Bbf21284KyTG972GeUkdSKta7e76oK-ZR9v~rG6-iFS~zViC-Gld0laTK5fvWeLUg-D2C1FJzzqR3TxAltdgobm7hCaovYwFT7skHbHw3OB5MomK6wHU249AAWX-12fImBDBVbfeSsEDlMvcqePG2QEcqbSSmQpHCTvPShe9T4BaUEc9i65rj4xLPZetPsQAm83qXwHLG8SIz~aVzx8IJD3GgoJVOrw-gp7s6Be4LLrXjrvzB1EoqBB8SzwXAIlrSzmG9hzIjIhcqGENLS0DFUl77OztLNGZzOUjD31f65mCU9Zj0mvWEFIl4SeMTnMlLO08kbvsAJKaEw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4";
+  const src = "";
 
   return (
     <div className={styles.root}>
@@ -20,19 +28,13 @@ const TextPost = () => {
           className={styles.profileImg}
         />
         <div className={styles.flexColumn}>
-          <div className={styles.name}>BigKuala</div>
-          <div className={styles.location}>Tel Aviv, Israel</div>
+          <div className={styles.name}>{title}</div>
+          <div className={styles.location}>{subtitle}</div>
         </div>
       </div>
-      <div className={styles.description}>
-        Finding your dream job is a journey, not a destination. Reflect on your
-        values, skills, and interests. Research industries and companies aligned
-        with your goals. Be adaptable and open to new experiences Your dream job
-        might surprise you!
-      </div>
+      <div className={styles.description}>{text}</div>
       <div className={styles.centerDiv}>
         <div className={styles.line}></div>
-
       </div>
       <div className={`${styles.flexRow} ${styles.padding}`}>
         <svg
@@ -65,7 +67,7 @@ const TextPost = () => {
               fill="white"
             />
           </svg>
-          <div>{t('common.view', { ns: 'common' })}</div>
+          <div>{t("common.view", { ns: "common" })}</div>
         </button>
         <button className={styles.btn}>
           <svg
@@ -80,7 +82,7 @@ const TextPost = () => {
               fill="#00799B"
             />
           </svg>
-          <div>{t('post.like')}</div>
+          <div>{t("post.like")}</div>
         </button>
 
         <button className={styles.btn}>
@@ -96,7 +98,7 @@ const TextPost = () => {
               fill="#00799B"
             />
           </svg>
-          <div>{t('post.comment')}</div>
+          <div>{t("post.comment")}</div>
         </button>
 
         <button className={styles.btn}>
@@ -119,7 +121,7 @@ const TextPost = () => {
               </clipPath>
             </defs>
           </svg>
-          <div>{t('common.share', { ns: 'common' })}</div>
+          <div>{t("common.share", { ns: "common" })}</div>
         </button>
       </div>
     </div>
