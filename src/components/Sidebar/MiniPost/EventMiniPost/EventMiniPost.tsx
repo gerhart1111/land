@@ -5,6 +5,7 @@ import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import BorderColorIcon from "@mui/icons-material/BorderColor";
 import Image, { StaticImageData } from "next/image";
 import { useTranslation } from "@/app/i18n/client";
+import { ReadMore } from "@mui/icons-material";
 
 interface Props {
   description: string;
@@ -67,7 +68,7 @@ const MarketingMiniPost = ({ lng, description, titlePost, img }: Props) => {
           {t("common.view", { ns: "common" })}
         </button>
         <button className={styles.registerButton}>
-          <BorderColorIcon fontSize="small" />
+          <ReadMore fontSize="small" />
           {t("sidebar.register")}
         </button>
       </div>

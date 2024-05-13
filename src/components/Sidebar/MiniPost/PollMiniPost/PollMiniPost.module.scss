@@ -13,14 +13,16 @@
 .title {
   width: 230px;
   color: #000;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
   letter-spacing: 0.667px;
   margin: 25px 10px;
+  text-align: center;
 }
+
 .buttons {
   display: flex;
   flex-direction: column;
@@ -28,6 +30,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .button {
   display: flex;
   width: 236px;
@@ -37,7 +40,7 @@
   border: 1px solid var(--Field-border, rgba(72, 92, 110, 0.5));
   background: var(--Field-BG, #e6f1f6);
   color: var(--Buttons, #485c6e);
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 600;

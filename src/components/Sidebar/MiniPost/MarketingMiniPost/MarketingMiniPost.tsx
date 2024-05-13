@@ -2,7 +2,6 @@
 import Image from "next/image";
 import styles from "./MarketingMiniPost.module.scss";
 import { useTranslation } from "@/app/i18n/client";
-import { inter } from "@/lib/fonts";
 import pass from "../../../../assets/images/pass.jpg";
 
 interface MarketingMiniPostProps {
@@ -18,7 +17,7 @@ const MarketingMiniPost = ({ lng }: MarketingMiniPostProps) => {
         <div className={styles.title}>{t("sidebar.minipost.title")}</div>
         <Image
           width={250}
-          height={250}
+          height={170}
           className={styles.img}
           src={pass}
           alt="img"

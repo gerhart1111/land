@@ -47,6 +47,7 @@
 
     &__menu {
       margin-bottom: 2rem;
+      position: relative;
     }
   }
 
@@ -64,9 +65,18 @@
     max-width: 44.5625rem;
     padding: 0.8rem;
     color: #000;
+
+    & p:last-of-type {
+      display: inline;
+    }
+  }
+
+  &__postTextBlock {
+    display: inline;
   }
 
   &__postImage {
+
     img,
     video {
       display: block;
@@ -102,6 +112,8 @@
         color: #00799b;
         background-color: transparent;
         width: fit-content;
+        position: relative;
+
         &:hover {
           background-color: #f5f5f5;
         }

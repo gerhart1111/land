@@ -1,20 +1,56 @@
 "use client";
-import styles from "./Post.module.scss";
-import logo from "../../assets/images/logo2.svg";
+import React, { useState } from "react";
+import { useTranslation } from "@/app/i18n/client";
+import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
+import { IconButton, Button } from "@mui/material";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import { Button, IconButton } from "@mui/material";
 import ShareIcon from "@mui/icons-material/Share";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
-import { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { useTranslation } from "@/app/i18n/client";
+import styles from "./Post.module.scss";
+import logo from "../../assets/images/logo.svg";
 import OptionMenu from "../OptionMenu";
+import TelegramIcon from "@mui/icons-material/Telegram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import XIcon from "@mui/icons-material/X";
 
-const Post = ({ lng }: any) => {
+interface PostProps {
+  key: number;
+  lng: string;
+  title: string;
+  subtitle: string;
+  feed: string[];
+  slug: string;
+  ns: string;
+  image: StaticImageData;
+}
+
+const Post: React.FC<PostProps> = ({
+  key,
+  lng,
+  title,
+  subtitle,
+  feed,
+  slug,
+  ns,
+  image,
+}) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const { t } = useTranslation(lng, ["post", "common"], Post);
+  const [isShareMenuOpen, setIsShareMenuOpen] = useState(false);
+  const [isMoreMenuOpen, setIsMoreMenuOpen] = useState(false);
 
+  const { t } = useTranslation(
+    lng,
+    ["post", "postSec", "postThird", "postFourth", "common"],
+    Post
+  );
+
+  const handleShareClick = () => {
+    setIsShareMenuOpen((prev) => !prev);
+  };
+  const handleShareMoreClick = () => {
+    setIsMoreMenuOpen((prev) => !prev);
+  };
   const handleToggleContent = () => {
     setIsExpanded((prev) => !prev);
   };
@@ -24,25 +60,50 @@ const Post = ({ lng }: any) => {
     return content.slice(0, maxLength);
   };
 
-  //content for test
-  const postContent =
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta odio corrupti assumenda consectetur perferendis iste in sequi enim ab iure vero ipsum neque cupiditate dolorem veritatis quas, odit non distinctio!";
+  const postContent = feed.map((text, index) => {
+    if (/post_subtitle\d*/.test(text)) {
+      return <h4 key={index}>{t(text, { ns: ns })}</h4>;
+    } else if (/post_details\d*/.test(text)) {
+      return <p key={index}>{t(text, { ns: ns })}</p>;
+    } else {
+      return <p key={index}>{t(text, { ns: ns })}</p>;
+    }
+  });
 
-  // image for test
-  const image =
-    "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg";
+  const shareOnTelegram = () => {
+    const hostName = "http://localhost:3000";
+    const url = encodeURIComponent(
+      `${hostName}/${lng}/about/articles#${t(slug, { ns: ns })}`
+    );
+    window.open(`https://t.me/share/url?url=${url}`, "_blank");
+  };
+
+  const shareOnFacebook = () => {
+    const hostName = "http://localhost:3000";
+
+    const url = encodeURIComponent(
+      `${hostName}/${lng}/about/articles#${t(slug, { ns: ns })}`
+    );
+    window.open(
+      `https://www.facebook.com/sharer/sharer.php?u=${url}`,
+      "_blank"
+    );
+  };
+
+  const shareOnTwitter = () => {
+    const hostName = "http://localhost:3000";
+
+    const url = encodeURIComponent(
+      `${hostName}/${lng}/about/articles#${t(slug, { ns: ns })}`
+    );
+    window.open(`https://twitter.com/intent/tweet?url=${url}`, "_blank");
+  };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} key={key}>
       <div className={styles.container__cardHeader}>
         <div className={styles.container__cardHeader__avatar}>
-          <Image
-            width={65}
-            height={65}
-            src={logo}
-            alt="logo"
-            className={styles.container__cardHeader__avatar__image}
-          />
+          <Image width={65} height={65} src={logo} alt="logo" />
           <div className={styles.container__cardHeader__avatar__text}>
             <span className={styles.container__cardHeader__avatar__text__brand}>
               AlterHelp
@@ -53,21 +114,55 @@ const Post = ({ lng }: any) => {
           </div>
         </div>
         <div className={styles.container__cardHeader__menu}>
-          <IconButton size="small">
+          <IconButton size="small" onClick={handleShareMoreClick}>
             <MoreVertIcon style={{ color: "#00799B" }} fontSize="medium" />
           </IconButton>
+          {isMoreMenuOpen && (
+            <OptionMenu
+              options={[
+                {
+                  label: "Share on Telegram",
+                  onClick: shareOnTelegram,
+                  icon: <TelegramIcon />,
+                },
+                {
+                  label: "Share on Facebook",
+                  onClick: shareOnFacebook,
+                  icon: <FacebookIcon />,
+                },
+                {
+                  label: "Share on Twitter",
+                  onClick: shareOnTwitter,
+                  icon: <XIcon />,
+                },
+              ]}
+            />
+          )}
         </div>
       </div>
       <div className={styles.container__cardMain}>
-        <div className={styles.container__postTitle}>{t("post.exit")}</div>
+        <div className={styles.container__postTitle}>
+          {t(title, { ns: ns })}
+        </div>
         <div className={styles.container__postContent}>
-          {isExpanded ? postContent : truncateContent(postContent)}
-          {postContent.length > 140 && (
-            <span onClick={handleToggleContent} className={styles.readMore}>
-              {isExpanded
-                ? t("common.show-less", { ns: "common" })
-                : t("common.show-more", { ns: "common" })}
-            </span>
+          {isExpanded ? (
+            <>
+              <article className={styles.container__postTextBlock}>
+                {postContent}
+              </article>
+              <span onClick={handleToggleContent} className={styles.readMore}>
+                {t("common.show-less", { ns: "common" })}
+              </span>
+            </>
+          ) : (
+            <>
+              {truncateContent(
+                postContent.map((item) => item.props.children).join("")
+              )}
+              <span onClick={handleToggleContent} className={styles.readMore}>
+                {t("common.show-more", { ns: "common" })}
+              </span>
+            </>
           )}
         </div>
         <div className={styles.container__postImage}>
@@ -75,15 +170,36 @@ const Post = ({ lng }: any) => {
         </div>
       </div>
       <div className={styles.container__cardFooter}>
-      <Link href={`/${lng}/about/articles/123123124`}>
-        <Button className={styles.button__view}>
-          <VisibilityOutlinedIcon />
-          <span>{t("common.view", { ns: "common" })}</span>
+        <Link href={`/${lng}/about/articles#${t(slug, { ns: ns })}`}>
+          <Button className={styles.button__view}>
+            <VisibilityOutlinedIcon />
+            <span>{t("common.view", { ns: "common" })}</span>
+          </Button>
+        </Link>
+        <Button className={styles.button__share} onClick={handleShareClick}>
+          <ShareIcon /> <span>{t("common.share", { ns: "common" })}</span>
+          {isShareMenuOpen && (
+            <OptionMenu
+              options={[
+                {
+                  label: "Share on Telegram",
+                  onClick: shareOnTelegram,
+                  icon: <TelegramIcon />,
+                },
+                {
+                  label: "Share on Facebook",
+                  onClick: shareOnFacebook,
+                  icon: <FacebookIcon />,
+                },
+                {
+                  label: "Share on Twitter",
+                  onClick: shareOnTwitter,
+                  icon: <XIcon />,
+                },
+              ]}
+            />
+          )}
         </Button>
-      </Link>
-      <Button className={styles.button__share}>
-        <ShareIcon /> <span>{t("common.share", { ns: "common" })}</span>
-      </Button>
       </div>
     </div>
   );

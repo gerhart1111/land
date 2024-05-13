@@ -31,25 +31,12 @@ interface NavbarProps {
 
 const Navbar = ({ lng, languages }: NavbarProps) => {
   const router = useRouter();
-  const pathname = usePathname();
 
   const [showLangSelector, setShowLangSelector] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
   const isMobileFormat = useMediaQuery("(max-width: 959px)");
-  const [isFocused, setIsFocused] = useState<boolean>(false);
 
   const { t } = useTranslation(lng, ["navbar", "common"], Navbar);
-
-  const isRegistrationOrSignIn =
-    pathname &&
-    [`/${lng}/account/CreateAccount`, `/${lng}/account/login`].includes(
-      pathname
-    );
-
-  const handleOpenAndCloseSearch = () => {
-    setIsSearchOpen((prev) => !prev);
-  };
 
   const handleRedirect = (query: string) => {
     router.replace(query);
@@ -80,22 +67,18 @@ const Navbar = ({ lng, languages }: NavbarProps) => {
 
           {!isMobileFormat ? (
             <div className={styles.navbarButtonWrapper}>
-              {!isRegistrationOrSignIn && (
-                <>
-                  <Link href={`/${lng}`}>
-                    <Button>
-                      <PersonAddOutlinedIcon />
-                      {t("navbar.create-account")}
-                    </Button>
-                  </Link>
-                  <Link href={`/${lng}`}>
-                    <Button>
-                      <LoginIcon />
-                      {t("navbar.sign-in")}
-                    </Button>
-                  </Link>
-                </>
-              )}
+              <Link href={`/${lng}`}>
+                <Button>
+                  <PersonAddOutlinedIcon />
+                  {t("navbar.create-account")}
+                </Button>
+              </Link>
+              <Link href={`/${lng}`}>
+                <Button>
+                  <LoginIcon />
+                  {t("navbar.sign-in")}
+                </Button>
+              </Link>
 
               {showLangSelector && (
                 <LanguageSelector
@@ -128,42 +111,15 @@ const Navbar = ({ lng, languages }: NavbarProps) => {
         </div>
       </div>
       {isMobileFormat && (
-        <div>
-          {isSearchOpen ? (
-            <div className={styles.mobileSearchButtons}>
-              <Button>{t("common.search", { ns: "common" })}</Button>
-              <Button onClick={() => setIsSearchOpen(false)}>
-                {t("common.cancel", { ns: "common" })}
-              </Button>
-            </div>
-          ) : (
-            <div className={styles.mobileAccountButtons}>
-              {!isRegistrationOrSignIn && (
-                <>
-                  <Button onClick={() => handleRedirect(`/${lng}`)}>
-                    <PersonAddOutlinedIcon />
-                    <span>{t("navbar.create-account")}</span>
-                  </Button>
-                  <Button onClick={() => handleRedirect(`/${lng}`)}>
-                    <LoginIcon />
-                    <span>{t("navbar.sign-in")}</span>
-                  </Button>
-                </>
-              )}
-              {pathname === `/${lng}` && (
-                <Button onClick={() => handleRedirect(`/${lng}`)}>
-                  <PersonAddOutlinedIcon />
-                  <span>{t("navbar.create-account")}</span>
-                </Button>
-              )}
-              {pathname === `/${lng}` && (
-                <Button onClick={() => handleRedirect(`/${lng}`)}>
-                  <LoginIcon />
-                  <span>{t("navbar.sign-in")}</span>
-                </Button>
-              )}
-            </div>
-          )}
+        <div className={styles.mobileAccountButtons}>
+          <Button onClick={() => handleRedirect(`/${lng}`)}>
+            <PersonAddOutlinedIcon />
+            <span>{t("navbar.create-account")}</span>
+          </Button>
+          <Button onClick={() => handleRedirect(`/${lng}`)}>
+            <LoginIcon />
+            <span>{t("navbar.sign-in")}</span>
+          </Button>
         </div>
       )}
     </>

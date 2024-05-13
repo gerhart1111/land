@@ -1,3 +1,4 @@
+import { metadata } from "@/app/[lng]/layout";
 import Table from "@/components/FaqTable/faqTable";
 
 interface FAQProps {
@@ -8,6 +9,7 @@ interface FAQProps {
 export default function FAQPage({ params }: FAQProps) {
   const { lng } = params;
 
+  metadata.title = "FAQ - AlterHelp";
   return (
     <>
       <Table lng={lng} />

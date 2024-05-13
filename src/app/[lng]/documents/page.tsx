@@ -1,5 +1,5 @@
-"use client";
-import { useTranslation } from "@/app/i18n/client";
+import DocumentsPage from "@/components/pages/Documents/page";
+import { metadata } from "../layout";
 
 interface DocumentsPageProps {
   params: {
@@ -7,18 +7,30 @@ interface DocumentsPageProps {
   };
 }
 
-const DocumentsPage: React.FC<DocumentsPageProps> = ({ params }) => {
+const DocumentsComponent: React.FC<DocumentsPageProps> = ({ params }) => {
   const { lng } = params;
-  const { t } = useTranslation(lng, "documents", DocumentsPage);
-  return (
-    <div>
-      <h1>{t("documents.title", { ns: "documents" })}</h1>
-      <h3>{t("documents.title1", { ns: "documents" })}</h3>
-      <h4>{t("documents.title2", { ns: "documents" })}</h4>
-      <p>{t("documents.title3", { ns: "documents" })}</p>
-      <h4>{t("documents.title4", { ns: "documents" })}</h4>
-    </div>
-  );
+  let title = "Documents - AlterHelp";
+
+  switch (lng) {
+    case "de":
+      title = "Urkunden - AlterHelp";
+      break;
+    case "en":
+      title = "Documents - AlterHelp";
+      break;
+    case "ru":
+      title = "Документы - AlterHelp";
+      break;
+    case "ua":
+      title = "Документи - AlterHelp";
+      break;
+
+    default:
+      title = "Documents - AlterHelp";
+  }
+
+  metadata.title = title;
+  return <DocumentsPage lng={lng} />;
 };
 
-export default DocumentsPage;
+export default DocumentsComponent;

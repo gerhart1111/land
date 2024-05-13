@@ -7,6 +7,8 @@
   "loginForm",
   "navbar",
   "post",
+  "postSec",
+  "postThird",
   "sidebar",
   "navigation",
   "terms",
@@ -15,5 +17,7 @@
   "information",
   "faq",
   "documents",
-  "citizenship"
+  "citizenship",
+  "about",
+  "help"
 ]

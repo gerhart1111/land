@@ -28,7 +28,7 @@ const TableRow = ({ title, content }: Props) => {
   return (
     <div className={styles.bordercontainer}>
       <div className={styles.row} onClick={toggleRow}>
-        <div className={styles.title}>{title}</div>
+        <h2 className={styles.title}>{title}</h2>
         <div className={`${styles.icon} ${isOpen ? styles.open : ""}`}>
           &#9660;
         </div>
@@ -54,13 +54,15 @@ const DropdownMenuContent: React.FC<DropdownMenuProps> = ({
 
   if (contentKey.some((key) => /^text1-|^text2-/.test(key))) {
     return (
-      <ul>
+      <ul className={styles.faq__list}>
         {contentKey.map((contKey, index) => (
           <React.Fragment key={index}>
             {contKey === "text1-1" ? (
               <strong>{t(`faq.${contKey}`, { ns: "faq" })}</strong>
             ) : (
-              <li key={index}>{t(`faq.${contKey}`, { ns: "faq" })}</li>
+              <li className={styles.faq__list__item} key={index}>
+                {t(`faq.${contKey}`, { ns: "faq" })}
+              </li>
             )}
           </React.Fragment>
         ))}
@@ -72,7 +74,11 @@ const DropdownMenuContent: React.FC<DropdownMenuProps> = ({
     <div>
       {contentKey &&
         contentKey.map((contKey, index) => {
-          return <p key={index}>{t(`faq.${contKey}`, { ns: "faq" })}</p>;
+          return (
+            <p className={styles.faq__description} key={index}>
+              {t(`faq.${contKey}`, { ns: "faq" })}
+            </p>
+          );
         })}
     </div>
   );
@@ -83,7 +89,7 @@ const Table = ({ lng }: TableProps) => {
 
   return (
     <div className="max-w-3xl mx-auto">
-      <h1>{t("faq.title", { ns: "faq" })}</h1>
+      <h1 className={styles.title}>{t("faq.title", { ns: "faq" })}</h1>
       <TableRow
         title={t("faq.head", { ns: "faq" })}
         content={

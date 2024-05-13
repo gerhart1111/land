@@ -1,30 +1,36 @@
-"use client";
-import { useTranslation } from "@/app/i18n/client";
+import SearcHumanPage from "@/components/pages/Search-Human/page";
+import { metadata } from "../layout";
 
 interface SearcHumanPagePageProps {
   params: {
     lng: string;
   };
 }
-const SearcHumanPage = ({ params }: SearcHumanPagePageProps) => {
-  const { lng } = params;
-  const { t } = useTranslation(lng, "search", SearcHumanPage);
 
-  return (
-    <div>
-      <h1>{t("search.main.title", { ns: "search" })}</h1>
-      <h3>{t("search.main.title1", { ns: "search" })}</h3>
-      <h4>{t("search.main.title2", { ns: "search" })}</h4>
-      <p>{t("search.main.title3", { ns: "search" })}</p>
-      <p>{t("search.main.title4", { ns: "search" })}</p>
-      <p>{t("search.main.title5", { ns: "search" })}</p>
-      <p>{t("search.main.title6", { ns: "search" })}</p>
-      <p>{t("search.main.title7", { ns: "search" })}</p>
-      <p>{t("search.main.title8", { ns: "search" })}</p>
-      <p>{t("search.main.title9", { ns: "search" })}</p>
-      <p>{t("search.main.title10", { ns: "search" })}</p>
-    </div>
-  );
+const SearcHumanComponent = ({ params }: SearcHumanPagePageProps) => {
+  const { lng } = params;
+  let title = "Search Person - AlterHelp";
+
+  switch (lng) {
+    case "de":
+      title = "Person suchen - AlterHelp";
+      break;
+    case "en":
+      title = "Search Person - AlterHelp";
+      break;
+    case "ru":
+      title = "Поиск человека - AlterHelp";
+      break;
+    case "ua":
+      title = "Пошук людини - AlterHelp";
+      break;
+
+    default:
+      title = "Search Person - AlterHelp";
+  }
+
+  metadata.title = title;
+  return <SearcHumanPage lng={lng} />;
 };
 
-export default SearcHumanPage;
+export default SearcHumanComponent;

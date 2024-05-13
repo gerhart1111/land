@@ -18,29 +18,24 @@ import {
   Settings,
   Tune,
   Work,
+  FindInPage,
+  BusinessCenter,
+  EuroSymbol,
+  AssuredWorkload,
+  DomainVerification,
+  Description,
+  DriveEta,
+  PersonSearch,
+  LocationSearching,
+  Newspaper,
+  Quiz,
+  ConnectWithoutContact,
+  Shield,
 } from "@mui/icons-material";
 import PeopleIcon from "@mui/icons-material/People";
-import BusinessIcon from "@mui/icons-material/Business";
 import InfoIcon from "@mui/icons-material/Info";
-import ArticleIcon from "@mui/icons-material/Article";
 import i18n from "../../utils/i18n";
 import React from "react";
-
-import PsychologyIcon from "@mui/icons-material/Psychology";
-import SearchIcon from "@mui/icons-material/Search";
-import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
-import ReviewsIcon from "@mui/icons-material/Reviews";
-import GroupsIcon from "@mui/icons-material/Groups";
-import ThumbsUpDownIcon from "@mui/icons-material/ThumbsUpDown";
-import AdsClickIcon from "@mui/icons-material/AdsClick";
-import CoPresentIcon from "@mui/icons-material/CoPresent";
-import PaymentsIcon from "@mui/icons-material/Payments";
-import Article from "@mui/icons-material/Article";
-import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
-import PlaceIcon from "@mui/icons-material/Place";
-import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
-import HandshakeIcon from "@mui/icons-material/Handshake";
-import ContactSupportIcon from "@mui/icons-material/ContactSupport";
 
 export const gradient = (
   <svg width={0} height={0} style={{ margin: 0 }}>
@@ -78,22 +73,22 @@ const homeMenu = {
     {
       title: i18n.t("navigation.constants.business", { ns: "navigation" }),
       href: "/documents",
-      icon: <BusinessIcon sx={{ fill: "#485C6E" }} />,
+      icon: <BusinessCenter sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
           {gradient}
-          <BusinessIcon style={{ fill: "url(#linearColors)" }} />
+          <BusinessCenter style={{ fill: "url(#linearColors)" }} />
         </>
       ),
     },
     {
       title: i18n.t("navigation.constants.resources", { ns: "navigation" }),
       href: "/search-human",
-      icon: <ArticleIcon sx={{ fill: "#485C6E" }} />,
+      icon: <FindInPage sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
           {gradient}
-          <ArticleIcon style={{ fill: "url(#linearColors)" }} />
+          <FindInPage style={{ fill: "url(#linearColors)" }} />
         </>
       ),
     },
@@ -508,44 +503,44 @@ export const careerMenu = {
     {
       title: i18n.t("navigation.constants.careerAi"),
       href: "/citizenship/eu",
-      icon: <PsychologyIcon sx={{ fill: "#485C6E" }} />,
+      icon: <EuroSymbol sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
           {gradient}
-          <PsychologyIcon style={{ fill: "url(#linearColors)" }} />
+          <EuroSymbol style={{ fill: "url(#linearColors)" }} />
         </>
       ),
     },
     {
       title: i18n.t("navigation.constants.smartJobSearch"),
       href: "/citizenship/legalization",
-      icon: <SearchIcon sx={{ fill: "#485C6E" }} />,
+      icon: <AssuredWorkload sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
           {gradient}
-          <SearchIcon style={{ fill: "url(#linearColors)" }} />
+          <AssuredWorkload style={{ fill: "url(#linearColors)" }} />
         </>
       ),
     },
     {
       title: i18n.t("navigation.constants.salaryAndWorkplace"),
       href: "/citizenship/pass-ua",
-      icon: <AttachMoneyIcon sx={{ fill: "#485C6E" }} />,
+      icon: <Public sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
           {gradient}
-          <AttachMoneyIcon style={{ fill: "url(#linearColors)" }} />
+          <Public style={{ fill: "url(#linearColors)" }} />
         </>
       ),
     },
     {
       title: i18n.t("navigation.constants.companyReviews"),
       href: "/citizenship/pass-ru",
-      icon: <ReviewsIcon sx={{ fill: "#485C6E" }} />,
+      icon: <Public sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
           {gradient}
-          <ReviewsIcon style={{ fill: "url(#linearColors)" }} />
+          <Public style={{ fill: "url(#linearColors)" }} />
         </>
       ),
     },
@@ -580,33 +575,33 @@ export const businessMenu = {
     {
       title: i18n.t("navigation.constants.recruitmentAI"),
       href: "/documents/visas",
-      icon: <PsychologyIcon sx={{ fill: "#485C6E" }} />,
+      icon: <DomainVerification sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
           {gradient}
-          <PsychologyIcon style={{ fill: "url(#linearColors)" }} />
+          <DomainVerification style={{ fill: "url(#linearColors)" }} />
         </>
       ),
     },
     {
       title: i18n.t("navigation.constants.targetedJobCampaigns"),
       href: "/documents/certificates",
-      icon: <AdsClickIcon sx={{ fill: "#485C6E" }} />,
+      icon: <Description sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
           {gradient}
-          <AdsClickIcon style={{ fill: "url(#linearColors)" }} />
+          <Description style={{ fill: "url(#linearColors)" }} />
         </>
       ),
     },
     {
       title: i18n.t("navigation.constants.companyBranding"),
       href: "/documents/driver-license",
-      icon: <CoPresentIcon sx={{ fill: "#485C6E" }} />,
+      icon: <DriveEta sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
           {gradient}
-          <CoPresentIcon style={{ fill: "url(#linearColors)" }} />
+          <DriveEta style={{ fill: "url(#linearColors)" }} />
         </>
       ),
     },
@@ -638,22 +633,22 @@ export const resourcesMenu = {
     {
       title: i18n.t("navigation.constants.team"),
       href: "/search-human/bio",
-      icon: <EmojiPeopleIcon sx={{ fill: "#485C6E" }} />,
+      icon: <PersonSearch sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
           {gradient}
-          <EmojiPeopleIcon style={{ fill: "url(#linearColors)" }} />
+          <PersonSearch style={{ fill: "url(#linearColors)" }} />
         </>
       ),
     },
     {
       title: i18n.t("navigation.constants.offices"),
       href: "/search-human/geo",
-      icon: <PlaceIcon sx={{ fill: "#485C6E" }} />,
+      icon: <LocationSearching sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
           {gradient}
-          <PlaceIcon style={{ fill: "url(#linearColors)" }} />
+          <LocationSearching style={{ fill: "url(#linearColors)" }} />
         </>
       ),
     },
@@ -688,11 +683,11 @@ export const aboutMenu = {
     {
       title: i18n.t("navigation.constants.articles"),
       href: "/about/articles",
-      icon: <Article sx={{ fill: "#485C6E" }} />,
+      icon: <Newspaper sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
           {gradient}
-          <Article style={{ fill: "url(#linearColors)" }} />
+          <Newspaper style={{ fill: "url(#linearColors)" }} />
         </>
       ),
     },
@@ -770,22 +765,22 @@ export const careerHelpMenu = {
     {
       title: i18n.t("navigation.constants.faq"),
       href: "/help/personal/faq",
-      icon: <QuestionAnswer sx={{ fill: "#485C6E" }} />,
+      icon: <Quiz sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
           {gradient}
-          <QuestionAnswer style={{ fill: "url(#linearColors)" }} />
+          <Quiz style={{ fill: "url(#linearColors)" }} />
         </>
       ),
     },
     {
       title: i18n.t("navigation.constants.contactUs"),
       href: "/help/personal/contact",
-      icon: <ContactSupport sx={{ fill: "#485C6E" }} />,
+      icon: <ConnectWithoutContact sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
           {gradient}
-          <ContactSupport style={{ fill: "url(#linearColors)" }} />
+          <ConnectWithoutContact style={{ fill: "url(#linearColors)" }} />
         </>
       ),
     },
@@ -810,22 +805,22 @@ export const businessHelpMenu = {
     {
       title: i18n.t("navigation.constants.faqBusiness"),
       href: "/help/business/faq",
-      icon: <QuestionAnswer sx={{ fill: "#485C6E" }} />,
+      icon: <Quiz sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
           {gradient}
-          <QuestionAnswer style={{ fill: "url(#linearColors)" }} />
+          <Quiz style={{ fill: "url(#linearColors)" }} />
         </>
       ),
     },
     {
       title: i18n.t("navigation.constants.contactUsBusiness"),
       href: "/help/business/contact",
-      icon: <ContactSupport sx={{ fill: "#485C6E" }} />,
+      icon: <ConnectWithoutContact sx={{ fill: "#485C6E" }} />,
       activeIcon: (
         <>
           {gradient}
-          <ContactSupport style={{ fill: "url(#linearColors)" }} />
+          <ConnectWithoutContact style={{ fill: "url(#linearColors)" }} />
         </>
       ),
     },
@@ -958,11 +953,11 @@ export const helpMenuLinks = [
   {
     title: "constants.privacyPolicy",
     href: "/privacy",
-    icon: <Policy sx={{ fill: "#485C6E" }} />,
+    icon: <Shield sx={{ fill: "#485C6E" }} />,
     activeIcon: (
       <>
         {gradient}
-        <Policy style={{ fill: "url(#linearColors)" }} />
+        <Shield style={{ fill: "url(#linearColors)" }} />
       </>
     ),
   },

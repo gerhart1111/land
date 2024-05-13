@@ -34,8 +34,8 @@ export default async function RootLayout({
     { value: "ua", name: "Українська", direction: "LTR" },
     { value: "ru", name: "Русский", direction: "LTR" },
   ];
-
   const { lng } = params;
+
   return (
     <html lang={lng} dir={dir(lng)}>
       <body className={`${roboto.variable || inter.variable} antialiased`}>

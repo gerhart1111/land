@@ -15,15 +15,4 @@ module.exports = {
   distDir: "build",
 };
 
-module.exports = {
-  images: {
-    remotePatterns: [
-      {
-        hostname: "cdn.pixabay.com",
-      },
-      {
-        hostname: "s3-alpha-sig.figma.com",
-      },
-    ],
-  },
-};
+module.exports = {};

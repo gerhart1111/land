@@ -44,41 +44,30 @@
   "navigation.constants.account-settings": "Налаштування аккаунта",
   "navigation.constants.suspend-account": "Призупинити обліковий запис",
   "navigation.constants.delete-account": "Видалити аккаунт",
-
-  "navigation.constants.recruitmentAI": "Реставрація паспорта",
+  "navigation.constants.recruitmentAI": "Візи",
   "navigation.constants.targetedJobCampaigns": "Отримання свідоцтв",
   "navigation.constants.companyBranding": "Водійське посвідчення",
-
   "navigation.constants.freeAndPremiumPlans": "Безкоштовні та преміум-плани",
   "navigation.constants.payPerApplicantPricing": "Плата за заявника",
-
   "navigation.constants.careerAi": "Громадянство ЄС",
   "navigation.constants.smartJobSearch": "Легалізація",
   "navigation.constants.salaryAndWorkplace": "Громадянство України",
   "navigation.constants.companyReviews": "Громадянство Росії",
-
   "navigation.constants.referralAndConnections": "Рекомендації та зв'язки",
   "navigation.constants.applicationStatuses": "Статуси додатків",
-
   "navigation.constants.articles": "Пошук персональної інформації",
   "navigation.constants.forum": "Пошук точної геолокації",
-  
   "navigation.constants.careerHelpCenter": "Допомога для фіз осіб",
   "navigation.constants.businessHelpCenter": "Допомога для юр осіб",
   "navigation.constants.contactUs": "Зв'яжіться з нами",
-  
-
   "navigation.constants.contactUsBusiness": "Зв'яжіться з нами",
   "navigation.constants.faqBusiness": "FAQ",
   "navigation.constants.usingNoviopusBusiness": "Інформація",
-
-
   "navigation.constants.usingNoviopus": "Інформація",
   "navigation.constants.faq": "FAQ",
   "navigation.constants.aboutUs": "Про нас",
-
-  "navigation.constants.team": "Команда",
-  "navigation.constants.offices": "Офіси",
+  "navigation.constants.team": "Статі",
+  "navigation.constants.offices": "Форум",
   "navigation.constants.investors": "Інвестори",
   "navigation.constants.partners": "Партнери",
   "navigation.constants.candidate-profile": "Профіль кандидата",
