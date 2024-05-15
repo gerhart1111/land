@@ -12,6 +12,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   menuItem: {
     fontSize: "0.9rem",
+    gap: "10px",
     "&:hover": {
       backgroundColor: "#ddd3d3",
     },

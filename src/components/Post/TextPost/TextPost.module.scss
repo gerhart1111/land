@@ -56,7 +56,7 @@
     height: 79px;
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: 50px;
     border-top: 0.25px solid #B7B7B7;
@@ -124,4 +124,11 @@ div .btn {
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.667px;
+}
+
+
+@media (max-width:550px) {
+    .footer {
+        gap: 10px;
+    }
 }

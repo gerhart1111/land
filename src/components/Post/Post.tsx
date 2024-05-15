@@ -13,6 +13,7 @@ import OptionMenu from "../OptionMenu";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import XIcon from "@mui/icons-material/X";
+import { ContentCopy } from "@mui/icons-material";
 
 interface PostProps {
   key: number;
@@ -99,6 +100,17 @@ const Post: React.FC<PostProps> = ({
     window.open(`https://twitter.com/intent/tweet?url=${url}`, "_blank");
   };
 
+  const copyLinkToClipboard = () => {
+    const hostName = "http://localhost:3000";
+    const url = `${hostName}/${lng}/about/articles#${t(slug, { ns: ns })}`;
+    navigator.clipboard
+      .writeText(url)
+      .then(() => {})
+      .catch((error) => {
+        console.error("Failed to copy: ", error);
+      });
+  };
+
   return (
     <div className={styles.container} key={key}>
       <div className={styles.container__cardHeader}>
@@ -121,19 +133,9 @@ const Post: React.FC<PostProps> = ({
             <OptionMenu
               options={[
                 {
-                  label: "Share on Telegram",
-                  onClick: shareOnTelegram,
-                  icon: <TelegramIcon />,
-                },
-                {
-                  label: "Share on Facebook",
-                  onClick: shareOnFacebook,
-                  icon: <FacebookIcon />,
-                },
-                {
-                  label: "Share on Twitter",
-                  onClick: shareOnTwitter,
-                  icon: <XIcon />,
+                  label: t("common.show.copy", { ns: "common" }),
+                  onClick: copyLinkToClipboard,
+                  icon: <ContentCopy />,
                 },
               ]}
             />
@@ -182,17 +184,17 @@ const Post: React.FC<PostProps> = ({
             <OptionMenu
               options={[
                 {
-                  label: "Share on Telegram",
+                  label: t("common.show.share", { ns: "common" }),
                   onClick: shareOnTelegram,
                   icon: <TelegramIcon />,
                 },
                 {
-                  label: "Share on Facebook",
+                  label: t("common.show.share1", { ns: "common" }),
                   onClick: shareOnFacebook,
                   icon: <FacebookIcon />,
                 },
                 {
-                  label: "Share on Twitter",
+                  label: t("common.show.share2", { ns: "common" }),
                   onClick: shareOnTwitter,
                   icon: <XIcon />,
                 },

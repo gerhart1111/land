@@ -7,5 +7,9 @@
   "common.cancel": "Скасувати",
   "common.decline": "Відхилити",
   "common.landing.logo-title": "Юридичні послуги",
-  "common.show.full.article": "Показати повну статтю"
+  "common.show.full.article": "Показати повну статтю",
+  "common.show.copy": "Копіювати посилання статті",
+  "common.show.share": "Поширити в Telegram",
+  "common.show.share1": "Поширити в Facebook",
+  "common.show.share2": "Поширити в Twitter"
 }

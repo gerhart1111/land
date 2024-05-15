@@ -7,5 +7,9 @@
   "common.cancel": "Stornieren",
   "common.decline": "Abfall",
   "common.landing.logo-title": "Juristische Dienstleistungen",
-  "common.show.full.article": "Komplette Meldung lesen"
+  "common.show.full.article": "Komplette Meldung lesen",
+  "common.show.copy": "Artikel-URL kopieren",
+  "common.show.share": "Im Telegramm teilen",
+  "common.show.share1": "Auf Facebook teilen",
+  "common.show.share2": "Auf Twitter teilen"
 }

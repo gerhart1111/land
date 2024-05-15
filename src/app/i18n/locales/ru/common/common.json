@@ -7,5 +7,9 @@
   "common.cancel": "Отмена",
   "common.decline": "Отклонить",
   "common.landing.logo-title": "Юридические услуги",
-  "common.show.full.article": "Показать полную статью"
+  "common.show.full.article": "Показать полную статью",
+  "common.show.copy": "Копировать ссылку статьи",
+  "common.show.share": "Поделиться в Telegram",
+  "common.show.share1": "Поделиться в Facebook",
+  "common.show.share2": "Поделиться в Twitter"
 }
