@@ -1,18 +1,16 @@
 .container {
-   display: flex;
-   align-items: center;
-   flex-direction: column;
-   gap: 3rem;
-   margin-bottom: 5rem;
-   overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 5rem;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 1380px) {
-   .container {
-     flex-grow: 1;
-     max-width:100%;
-     width: 100%;
-   }
- }
-
- 
+  .container {
+    flex-grow: 1;
+    max-width: 100%;
+    width: 100%;
+  }
+}

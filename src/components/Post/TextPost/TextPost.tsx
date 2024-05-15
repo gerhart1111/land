@@ -56,9 +56,8 @@ const TextPost = ({
       return <p key={index}>{t(category, { ns: ns })}</p>;
     }
   });
-
   return (
-    <div className={styles.root}>
+    <>
       <div className={styles.warpTop}>
         <Image
           width={65}
@@ -80,9 +79,7 @@ const TextPost = ({
         <ThumbUpIcon />
         <div className={styles.likes}>{likeCount}</div>
       </div>
-      <div
-        className={`${styles.footer}  ${styles.flexRow}  ${styles.centerRow}`}
-      >
+      <div className={`${styles.footer}  ${styles.flexRow} `}>
         <Button className={`${styles.btn} ${styles.view}`}>
           <VisibilityIcon />
           <div>{t("common.view", { ns: "common" })}</div>
@@ -98,7 +95,7 @@ const TextPost = ({
           <div>{t("post.comment")}</div>
         </Button>
       </div>
-    </div>
+    </>
   );
 };
 
