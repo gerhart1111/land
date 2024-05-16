@@ -42,7 +42,7 @@ const Navbar = ({ lng, languages }: NavbarProps) => {
     router.replace(query);
   };
 
-  const handleMenuOpen = () => {
+  const handleMenu = () => {
     setMenuOpen((prev) => !prev);
   };
 
@@ -98,11 +98,11 @@ const Navbar = ({ lng, languages }: NavbarProps) => {
           ) : (
             <>
               {!menuOpen ? (
-                <IconButton onClick={handleMenuOpen}>
+                <IconButton onClick={handleMenu}>
                   <MenuIcon style={{ color: "#485C6E" }} />
                 </IconButton>
               ) : (
-                <IconButton onClick={handleMenuOpen}>
+                <IconButton onClick={handleMenu}>
                   <CloseIcon style={{ color: "#485C6E" }} />
                 </IconButton>
               )}

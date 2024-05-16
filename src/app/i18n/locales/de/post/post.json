@@ -1,5 +1,22 @@
 {
-  "post.exit": "Выход",
-  "post.comment": "Комментарий",
-  "post.like": "Нравиться"
+  "post.exit": "Ausgang",
+  "post.comment": "Kommentar",
+  "post.like": "Gefällt mir",
+  "post_title": "Immobilien-Dienstleistungen",
+  "post_slug": "immobilien_dienstleistungen",
+  "post_title1": "Immobilien-Dienstleistungen von AlterHelp: Garantie für Sicherheit und Vorteile",
+  "post_intro": "Möchten Sie Immobilien kaufen, verkaufen oder formalisieren? Möchten Sie keine Zeit und Mühe damit verschwenden, rechtliche Feinheiten zu studieren? Vertrauen Sie den Profis von AlterHelp!",
+  "post_subtitle": "Unterstützung bei Immobiliengeschäften",
+  "post_subtitle_feed": "Unterstützung bei Immobiliengeschäften. ",
+  "post_details": "Wir überprüfen sorgfältig alle Dokumente im Zusammenhang mit Immobilien, um die Sicherheit der Transaktion zu gewährleisten. Wir kümmern uns um alle Arbeiten zur Vorbereitung der erforderlichen Dokumente, damit Sie keine Zeit mit bürokratischen Verfahren verschwenden müssen. Wir vertreten Ihre Interessen in allen Instanzen im Zusammenhang mit der Formalisierung der Transaktion.",
+  "post_subtitle1": "Erbschaftsformalisierung",
+  "post_details1": "Wir helfen Ihnen, alle erforderlichen Dokumente für die Erbschaftsformalisierung zu sammeln. Wir vertreten Ihre Interessen im Notariat bei der Erbschaftsformalisierung. Wir unterstützen Sie bei der Registrierung von Eigentumsrechten an geerbten Immobilien.",
+  "post_subtitle2": "Grundstücksfragen",
+  "post_details2": "Registrierung von Eigentumsrechten an Grundstücken: Wir helfen Ihnen, Eigentumsrechte an Grundstücken zu registrieren. Lösung von Grundstücksstreitigkeiten: Wir vertreten Ihre Interessen im Falle von Grundstücksstreitigkeiten. Wir unterstützen Sie bei der Abmarkung von Grundstücken.",
+  "post_subtitle3": "Hypothekenfinanzierung",
+  "post_details3": "Wir helfen Ihnen, ein Hypothekenprogramm zu wählen, das Ihren Bedürfnissen entspricht. Wir kümmern uns um alle rechtlichen Aspekte der Hypothekenformalisierung. Wir begleiten Sie in allen Phasen der Immobilientransaktion unter Verwendung von Hypothekenfinanzierung.",
+  "post_subtitle4": "Immobilienstreitigkeiten",
+  "post_details4": "Wir werden versuchen, den Streit durch Verhandlungen beizulegen. Wir vertreten Ihre Interessen vor Gericht, wenn nötig. Wir legen Gerichtsentscheidungen an, wenn sie nicht Ihren Interessen entsprechen.",
+  "post_subtitle5": "Warum AlterHelp wählen?",
+  "post_details5": "Wir haben umfangreiche Erfahrung auf dem Gebiet der Immobilien und kennen alle Feinheiten der Gesetzgebung. Wir garantieren die rechtliche Reinheit der Transaktion und den Schutz Ihrer Rechte. Wir kümmern uns um alle rechtlichen Arbeiten, damit Sie Ihre Zeit sparen können."
 }

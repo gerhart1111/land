@@ -22,7 +22,7 @@ export const articles: ArticlesProps[] = [
   {
     id: "1",
     translateNS: "postSec",
-    slug: "post.slug",
+    slug: "postSec_slug",
     title: "postSec_title",
     subtitle: "postSec_title1",
     description: ["postSec_intro"],
@@ -47,7 +47,7 @@ export const articles: ArticlesProps[] = [
   {
     id: "2",
     translateNS: "post",
-    slug: "post.slug",
+    slug: "post_slug",
     title: "post_title",
     subtitle: "post_title1",
     description: ["post_intro"],
@@ -79,7 +79,7 @@ export const articles: ArticlesProps[] = [
   {
     id: "3",
     translateNS: "postThird",
-    slug: "post.slug",
+    slug: "postThird_slug",
     title: "postThird.title",
     subtitle: "postThird.title1",
     description: ["postThird.intro"],
@@ -106,7 +106,7 @@ export const articles: ArticlesProps[] = [
   {
     id: "4",
     translateNS: "postFourth",
-    slug: "post.slug",
+    slug: "postFourth_slug",
     title: "postFourth_title",
     subtitle: "postFourth_title1",
     description: ["postFourth_intro"],
